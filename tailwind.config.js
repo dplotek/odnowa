@@ -4,7 +4,8 @@ module.exports = {
     extend: {
       fontFamily: {
         'lato': ['Lato', 'sans-serif'],
-        'oswald': ["Oswald", 'sans-serif']
+        'oswald': ["Oswald", 'sans-serif'],
+        'body': ['Lato', 'sans-serif'],
       }
     },
   },
