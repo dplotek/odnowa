@@ -13,13 +13,13 @@
 
   <nav class="w-full sticky top-0 left-0 bg-black drop-shadow-[0_1px_1px_rgba(255,255,255,0.2)]">
     <div class="max-w-screen-xl mx-auto flex justify-between items-center px-6">
-      <p class="font-oswald text-2xl py-2">
+      <p class="font-oswald text-4xl py-2">
         <a href="./index.html">
           <span class="font-extralight">OD</span><span class="font-semibold">NOWA</span>
         </a>
       </p>
 
-      <ul class="hidden md:flex left-0 top-0 bg-black text-sm font-medium">
+      <ul class="hidden md:flex left-0 top-0 bg-black text-md font-medium">
         <li class="mr-4 border-b-2 border-yellow-600">
           <a href="./index.html">
             Strona główna
@@ -50,6 +50,7 @@
       <button 
         class="md:hidden w-6 h-6 flex items-center justify-center relative"
         id="nav-toggler"
+        aria-label="menu"
       >
         <span 
           class="transform transition w-full h-px bg-white -translate-y-2 absolute"
@@ -142,27 +143,33 @@
     Labore officia repellendus dignissimos ducimus ea quis dicta natus laudantium explicabo ipsa, corrupti laborum possimus facere quam, voluptate deleniti temporibus. Ipsa reprehenderit rem corrupti nemo. Enim nemo reprehenderit dicta alias.
   </div>
 
-  <footer class="mt-12 pb-12 bg-neutral-900 w-full">
+  <footer class="mt-12 pt-12 pb-24 bg-neutral-900 w-full">
     <div class="max-w-screen-xl mx-auto flex px-6 flex-col md:flex-row">
       <div class="flex-1 mr-6 mt-12">
-        <p class="font-oswald text-[38px] leading-10">
+        <p class="font-oswald text-[50px] leading-[58px]">
           <span class="font-extralight">OD</span><span class="font-semibold">NOWA</span>
         </p>
-        <p class="font-oswald text-xs text-secondary">
+        <p class="font-oswald text-md text-secondary">
           Studio treningu personalnego
         </p>
-        <p class="mt-8 text-sm text-gray-400">
+        <p class="mt-4 text-md text-gray-300">
           ODNOWA Studio treningu personalnego nie jest otwartą siłownią czy centrum fitness. Jest to kameralne miejsce gdzie w zaciszu, bez niepotrzebnego tłumu spełnisz swoje realizacje treningowe. Jest to gwarancja dobrego samopoczucia jeżeli cenisz sobie prywatność.
         </p>
       </div>
   
       <div class="flex-1 mr-6 mt-12">
         <p class="text-xl font-bold">
-          Nasze media społecznościowe
+          Media społecznościowe
         </p>
         <div class="h-1 w-12 bg-secondary my-2"></div>
-        <p>fb</p>
-        <p>ig</p>
+        <div class="flex">
+          <a href="https://www.facebook.com/odnowakalisz" target="_blank" rel="noopener" class="mr-2">
+            <img src="./assets/facebook.svg" alt="facebook logo" width="48px" height="48px"/>
+          </a>
+          <a href="https://www.instagram.com/odnowastudio/" target="_blank" rel="noopener">
+            <img src="./assets/instagram.svg" alt="instgram logo" width="48px" height="48px"/>
+          </a>
+        </div>
       </div>
   
       <div class="flex-1 mt-12">
@@ -170,15 +177,19 @@
           Kontakt
         </p>
         <div class="h-1 w-12 bg-secondary my-2"></div>
-        <p>
+        <a href="https://www.google.com/maps/dir//Staszica+43,+62-800+Kalisz/@51.752542,18.0777471,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x471ac594a7e866bd:0xb5a57977107fda67!2m2!1d18.0799358!2d51.7525387" class="block py-4 font-bold" target="_blank" rel="noopener">
           Staszica 43, 62-800 Kalisz
-        </p>
-        <p>
+        </a>
+        <a href="tel:+48782556543" class="block pb-4 font-bold">
           +48 782 556 543
-        </p>
+        </a>
       </div>
     </div>
   </footer>
+  
+  <div class="max-w-screen-xl mx-auto my-4 px-6 font-bold">
+    Prawa autorskie © ODNOWA <span class="text-secondary">Studio Treningu Personalnego</span>. Wszelkie prawa zastrzeżone.
+  </div>
 
   <script src="./scripts/menu.js"></script>
 </body>
