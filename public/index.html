@@ -11,7 +11,7 @@
 
 <body>
 
-  <nav class="w-full sticky top-0 left-0 bg-black drop-shadow-[0_1px_1px_rgba(255,255,255,0.2)]">
+  <nav class="w-full sticky top-0 left-0 bg-black drop-shadow-[0_1px_1px_rgba(255,255,255,0.2)] z-10">
     <div class="max-w-screen-xl mx-auto flex justify-between items-center px-6">
       <p class="font-oswald text-4xl py-2">
         <a href="./index.html">
@@ -106,6 +106,24 @@
     </div>
   </nav>
 
+  <div class="relative bg-black/[.4]">
+    <div class="hero-image" data-image="assets/herosection.jpg"></div>
+    <div class="absolute top-3/4 left-1/2 transform -translate-x-1/2 text-center text-5xl">
+      <p class="mb-4">
+        Zadbaj z Nami o swoje zdrowie
+      </p>
+      <p class="font-oswald">
+        <span class="font-extralight">OD</span><span class="font-semibold">NOWA</span>
+      </p>
+      <div class="mt-8 animate-bounce flex justify-center items-center ">
+        <div class="bg-secondary h-12 w-12 rounded-full flex align-center justify-center items-center flex-col">
+          <svg class="h-10 w-10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="000" aria-hidden="true">
+            <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <div>
     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis nesciunt quod officiis expedita a pariatur saepe inventore corporis nihil illo! Voluptate reprehenderit optio laudantium ipsa numquam sunt ratione, distinctio dolor?
@@ -189,5 +207,17 @@
   </div>
 
   <script src="./scripts/menu.js"></script>
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/parallax-imagescroll@0.2.3/jquery.imageScroll.min.js"></script>
+
+  <script>
+    const touch = Modernizr.touch;
+    $('.hero-image').imageScroll({
+      imageAttribute: (touch === true) ? "image-mobile" : "image",
+      touch: touch,
+      coverRatio: 1
+    })
+  </script>
 </body>
 </html>
