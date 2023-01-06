@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kalkulator kalorii - ODNOWA Studio Treningu Personalnego</title>
+  <link href="./output.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <nav class="w-full sticky top-0 left-0 bg-black drop-shadow-[0_1px_1px_rgba(255,255,255,0.2)]">
+    <div class="max-w-screen-xl mx-auto flex justify-between items-center px-6">
+      <p class="font-oswald text-4xl py-2">
+        <a href="./index.html">
+          <span class="font-extralight">OD</span><span class="font-semibold">NOWA</span>
+        </a>
+      </p>
+
+      <ul class="hidden md:flex left-0 top-0 bg-black text-md font-medium">
+        <li class="mr-4">
+          <a href="./index.html">
+            Strona główna
+          </a>
+        </li>
+        <li class="mr-4">
+          <a href="./our-team.html">
+            Nasz zespół
+          </a>
+        </li>
+        <li class="mr-4">
+          <a href="./services.html">
+            Usługi
+          </a>
+        </li>
+        <li class="mr-4 border-b-2 border-yellow-600 font-bold">
+          <a href="./kcal-calculator.html">
+            Kalkulator kalorii
+          </a>
+        </li>
+        <li>
+          <a href="./contact.html">
+            Kontakt
+          </a>
+        </li>
+      </ul>
+      
+      <button 
+        class="md:hidden w-6 h-6 flex items-center justify-center relative"
+        id="nav-toggler"
+        aria-label="menu"
+      >
+        <span 
+          class="transform transition w-full h-px bg-white -translate-y-2 absolute"
+          id="hamburger1"
+        ></span>
+        <span 
+          class="transform transition w-full h-px bg-white absolute"
+          id="hamburger2"
+        ></span>
+        <span 
+          class="transform transition w-full h-px bg-white translate-y-2 absolute"
+          id="hamburger3"
+        ></span>
+      </button>
+
+      <div 
+        class="transform transition -translate-x-full md:hidden absolute left-0 top-0 -z-10 w-full min-h-screen flex" 
+        id="mobile-menu"
+      >
+        <ul class="text-lg font-bold bg-black pl-6 h-screen w-2/3 pt-16">
+          <li class="mr-4">
+            <a href="./index.html">
+              Strona główna
+            </a>
+          </li>
+          <li class="mr-4">
+            <a href="./our-team.html">
+              Nasz zespół
+            </a>
+          </li>
+          <li class="mr-4">
+            <a href="./services.html">
+              Usługi
+            </a>
+          </li>
+          <li class="mr-4">
+            <a href="./kcal-calculator.html" class="border-yellow-600 border-b-2">
+              Kalkulator kalorii
+            </a>
+          </li>
+          <li>
+            <a href="./contact.html">
+              Kontakt
+            </a>
+          </li>
+        </ul>
+
+        <div class="bg-black w-1/3 opacity-60" id="menu-backdrop"></div>
+      </div>
+    </div>
+  </nav>
+
+  <footer class="mt-12 pt-12 pb-24 bg-neutral-900 w-full">
+    <div class="max-w-screen-xl mx-auto flex px-6 flex-col md:flex-row">
+      <div class="flex-1 mr-6 mt-12">
+        <p class="font-oswald text-[50px] leading-[58px]">
+          <span class="font-extralight">OD</span><span class="font-semibold">NOWA</span>
+        </p>
+        <p class="font-oswald text-md text-secondary">
+          Studio treningu personalnego
+        </p>
+        <p class="mt-4 text-md text-gray-300">
+          ODNOWA Studio treningu personalnego nie jest otwartą siłownią czy centrum fitness. Jest to kameralne miejsce gdzie w zaciszu, bez niepotrzebnego tłumu spełnisz swoje realizacje treningowe. Jest to gwarancja dobrego samopoczucia jeżeli cenisz sobie prywatność.
+        </p>
+      </div>
+  
+      <div class="flex-1 mr-6 mt-12">
+        <p class="text-xl font-bold">
+          Media społecznościowe
+        </p>
+        <div class="h-1 w-12 bg-secondary my-2"></div>
+        <div class="flex">
+          <a href="https://www.facebook.com/odnowakalisz" target="_blank" rel="noopener" class="mr-2">
+            <img src="./assets/facebook.svg" alt="facebook logo" width="48px" height="48px"/>
+          </a>
+          <a href="https://www.instagram.com/odnowastudio/" target="_blank" rel="noopener">
+            <img src="./assets/instagram.svg" alt="instgram logo" width="48px" height="48px"/>
+          </a>
+        </div>
+      </div>
+  
+      <div class="flex-1 mt-12">
+        <p class="text-xl font-bold">
+          Kontakt
+        </p>
+        <div class="h-1 w-12 bg-secondary my-2"></div>
+        <a href="https://www.google.com/maps/dir//Staszica+43,+62-800+Kalisz/@51.752542,18.0777471,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x471ac594a7e866bd:0xb5a57977107fda67!2m2!1d18.0799358!2d51.7525387" class="block py-4 font-bold" target="_blank" rel="noopener">
+          Staszica 43, 62-800 Kalisz
+        </a>
+        <a href="tel:+48782556543" class="block pb-4 font-bold">
+          +48 782 556 543
+        </a>
+      </div>
+    </div>
+  </footer>
+  
+  <div class="max-w-screen-xl mx-auto my-4 px-6 font-bold">
+    Prawa autorskie © ODNOWA <span class="text-secondary">Studio Treningu Personalnego</span>. Wszelkie prawa zastrzeżone.
+  </div>
+
+  <script src="./scripts/menu.js"></script>
+</body>
+</html>
