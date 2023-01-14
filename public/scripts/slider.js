@@ -1,10 +1,9 @@
 const body = document.querySelector("body")
-const slides = [...document.querySelector('.splide__list').querySelectorAll("img")]
+const slides = [...document.querySelector('#gallery').querySelectorAll("img")]
 slides.forEach(item => {
   item.addEventListener("click", () => {
     const src = item.getAttribute("src")
     createGallery(src)
-    console.log(src)
   })
 })
 
