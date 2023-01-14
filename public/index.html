@@ -8,6 +8,7 @@
   <link href="./output.css" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet">
 </head>
 
 <body>
@@ -109,7 +110,7 @@
 
   <div class="relative bg-black/[.4]">
     <div class="hero-image" data-image="assets/herosection.jpg"></div>
-    <div class="absolute top-3/4 left-1/2 transform -translate-x-1/2 text-center text-5xl">
+    <div class="absolute top-2/3 md:top-3/4 left-1/2 transform -translate-x-1/2 text-center text-2xl md:text-5xl">
       <p class="mb-4">
         Zadbaj z Nami o swoje zdrowie
       </p>
@@ -168,7 +169,7 @@
     </div>
 
     <div class="bg-neutral-900">
-      <div class="max-w-screen-xl mx-auto px-6 py-16 grid grid-cols-2 lg:grid-cols-4 gap-4">
+      <div class="max-w-screen-xl mx-auto px-6 py-16 grid grid-cols-1 lg:grid-cols-4 gap-4">
         <div class="flex items-center">
           <img src="assets/heart.svg"/>
           <div class="ml-4">
@@ -273,6 +274,37 @@
         </a>
       </div>
     </div>
+
+    <div class="bg-neutral-900 mx-auto py-24">
+      <h2 class="text-center text-4xl mb-12 font-oswald uppercase font-bold">
+        STUDIO
+      </h2>
+
+      <div class="max-w-screen-xl mx-auto px-6">
+        <section class="splide" aria-label="Splide Basic HTML Example">
+          <div class="splide__arrows">
+            <button class="splide__arrow splide__arrow--prev">
+              <img src="assets/left-arrow.svg"/>
+            </button>
+            <button class="splide__arrow splide__arrow--next rotate-180">
+              <img src="assets/left-arrow.svg"/>
+            </button>
+          <div class="splide__track">
+            <ul class="splide__list">
+              <img src="assets/img/studio/studio1.jpg" class="splide__slide"/>
+              <img src="assets/img/studio/studio2.jpg" class="splide__slide"/>
+              <img src="assets/img/studio/studio3.jpg" class="splide__slide"/>
+              <img src="assets/img/studio/studio4.jpg" class="splide__slide"/>
+              <img src="assets/img/studio/studio5.jpg" class="splide__slide"/>
+              <img src="assets/img/studio/studio6.jpg" class="splide__slide"/>
+              <img src="assets/img/studio/studio7.jpg" class="splide__slide"/>
+              <img src="assets/img/studio/studio8.jpg" class="splide__slide"/>
+            </ul>
+          </div>
+        </section>
+      </div>
+    </div>
+
   </main>
 
   <footer class="mt-12 pt-12 pb-24 bg-neutral-900 w-full">
@@ -324,6 +356,8 @@
   </div>
 
   <script src="./scripts/menu.js"></script>
+  <script src="./scripts/slider.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
   <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/parallax-imagescroll@0.2.3/jquery.imageScroll.min.js"></script>
