@@ -11,6 +11,20 @@
   <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet">
 </head>
 
+<style>
+  .splide__progress {
+    background: #ccc;
+    margin-top: 24px;
+  }
+  
+  .splide__progress__slide {
+    background: #e1ad00;
+    height: 2px;
+    transition: width 400ms ease;
+    width: 0;
+  }
+</style>
+
 <body>
 
   <nav class="w-full sticky top-0 left-0 bg-black drop-shadow-[0_1px_1px_rgba(255,255,255,0.2)] z-10">
@@ -281,7 +295,7 @@
       </h2>
 
       <div class="max-w-screen-xl mx-auto px-6">
-        <section class="splide" aria-label="Splide Basic HTML Example">
+        <section class="splide" id="studio_gallery">
           <div class="splide__arrows">
             <button class="splide__arrow splide__arrow--prev">
               <img src="assets/left-arrow.svg"/>
@@ -303,6 +317,145 @@
           </div>
         </section>
       </div>
+    </div>
+
+    <div class="max-w-screen-xl mx-auto px-6 py-24">
+      <h2 class="text-center text-4xl mb-12 font-oswald uppercase font-bold">
+        OPINIE
+      </h2>
+
+      <div class="splide" id="opinions" >
+        <div class="splide__track">
+          <ul class="splide__list">
+            <li class="splide__slide flex justify-center items-center">
+              <a href="https://g.co/kgs/o75NF3" target="_blank" rel="noopener">
+                <div class="w-96 bg-neutral-900 p-8 rounded-lg">
+                  <div class="flex">
+                    <img class="mr-4 mb-4" src="https://lh3.googleusercontent.com/a/AEdFTp6uV0Vk-xi8HDR_uKtSWdXVB_S1lfqwJa0Ev2e11A=s40-c-c0x00000000-cc-rp-mo-br100"/>
+                      <div>
+                        <p class="font-bold">TaHaPL</p>
+                        <div class="flex">
+                          <img src="assets/star.png" width="16" height="16"/>
+                          <img src="assets/star.png" width="16" height="16"/>
+                          <img src="assets/star.png" width="16" height="16"/>
+                          <img src="assets/star.png" width="16" height="16"/>
+                          <img src="assets/star.png" width="16" height="16"/>
+                        </div>
+                      </div>
+                  </div>
+                  <p>
+                    Bardzo profesjonalne miejsce na mapie Kalisza. 
+                    Studio posiada wszystkie niezbędne przyrządy 
+                    do kształtowania sylwetki, aparatu ruchu i ogólnie zdrowia. 
+                    Trenerzy wyróżniają się doskonałą wiedzą i zaangażowaniem. 
+                    Zgubiłem już 6kg, samopoczucie dużo lepsze, produktywność w pracy na plus. 
+                    Nie wyobrażam sobie rezygnacji z treningów u chłopaków. Polecam!!!
+                  </p>
+                </div>
+              </a>
+            </li>
+
+            <li class="splide__slide flex justify-center items-center">
+              <a href="https://g.co/kgs/EtEZXE" target="_blank" rel="noopener">
+                <div class="w-96 bg-neutral-900 p-8 rounded-lg">
+                  <div class="flex">
+                    <img class="mr-4 mb-4" src="https://lh3.googleusercontent.com/a-/AD5-WCnVjH3LuhVYSk15akqPHSNm0O_WPdVYz_EYTEDPUQ=s40-c-c0x00000000-cc-rp-mo-br100"/>
+                      <div>
+                        <p class="font-bold">Justyna N</p>
+                        <div class="flex">
+                          <img src="assets/star.png" width="16" height="16"/>
+                          <img src="assets/star.png" width="16" height="16"/>
+                          <img src="assets/star.png" width="16" height="16"/>
+                          <img src="assets/star.png" width="16" height="16"/>
+                          <img src="assets/star.png" width="16" height="16"/>
+                        </div>
+                      </div>
+                  </div>
+                  <p>
+                    ODNOWA Studio treningu personalnego to wspaniałe miejsce dla osób pragnących zwiększyć swoją aktywność fizyczną, zgubić zbędne kilogramy, poprawić swoją kondycję oraz siłę mięśni, a w efekcie zmienić swoje życie na lepsze. Obaj trenerzy wykazują się dużą wiedzą oraz profesjonalizmem, doskonale nadzorują technikę wykonywanych ćwiczeń, a dodatkowo motywują do wykorzystania maksimum swoich możliwości. Panuje tam bardzo przyjemna atmosfera, trenerzy z łatwością nawiązują kontakt z klientem. Dodatkowym atutem miejsca są porady żywieniowe, których udzielają trenerzy. Serdecznie polecam!!! 😊
+                  </p>
+                </div>
+              </a>
+            </li>
+
+            <li class="splide__slide flex justify-center items-center">
+              <a href="https://g.co/kgs/dCLiAk" target="_blank" rel="noopener">
+                <div class="w-96 bg-neutral-900 p-8 rounded-lg">
+                  <div class="flex">
+                    <img class="mr-4 mb-4" src="https://lh3.googleusercontent.com/a/AEdFTp77dvV_lS6-801OyuxQUePCDIPe9IA8VbNpYIMS=s40-c-c0x00000000-cc-rp-mo-br100"/>
+                      <div>
+                        <p class="font-bold">Kasia Kaczmarek</p>
+                        <div class="flex">
+                          <img src="assets/star.png" width="16" height="16"/>
+                          <img src="assets/star.png" width="16" height="16"/>
+                          <img src="assets/star.png" width="16" height="16"/>
+                          <img src="assets/star.png" width="16" height="16"/>
+                          <img src="assets/star.png" width="16" height="16"/>
+                        </div>
+                      </div>
+                  </div>
+                  <p>
+                    Moja współpraca ze studiem ODNOWA zaczęła się od chęci zmiany. Podstawowym celem treningowym była potrzeba zwiększenia swobody ruchów, poprawienie nawyków żywieniowych i zgubienia zbędnych kilogramów. Już po kilku tygodniach widzę ogromną zmianę na plus w samopoczuciu i na minus w centymetrach 😊😊😊
+                    Bardzo podoba mi się możliwość trenowania zarówno z Patrykiem jak i Mikołajem bo nie wkrada się monotonia.
+                    Obaj Panowie są sympatyczni i charakteryzuje ich profesjonalizm, wiedza, motywacja i zaangażowanie.
+                    Z czystym sumieniem polecam!
+                  </p>
+                </div>
+              </a>
+            </li>
+
+            <li class="splide__slide flex justify-center items-center">
+              <a href="https://g.co/kgs/P36dgL" target="_blank" rel="noopener">
+                <div class="w-96 bg-neutral-900 p-8 rounded-lg">
+                  <div class="flex">
+                    <img class="mr-4 mb-4" src="https://lh3.googleusercontent.com/a/AEdFTp5en2JEH8Qm9tE6whli8CmUEF0fiUbYJBlx8Ga9=s40-c-c0x00000000-cc-rp-mo-br100"/>
+                      <div>
+                        <p class="font-bold">Kazik Monka</p>
+                        <div class="flex">
+                          <img src="assets/star.png" width="16" height="16"/>
+                          <img src="assets/star.png" width="16" height="16"/>
+                          <img src="assets/star.png" width="16" height="16"/>
+                          <img src="assets/star.png" width="16" height="16"/>
+                          <img src="assets/star.png" width="16" height="16"/>
+                        </div>
+                      </div>
+                  </div>
+                  <p>
+                    Siłownia w bardzo dobrym standardzie. Wnętrze i sprzęt na wysokim poziomie. Trener z dużą wiedzą zarówno na temat treningów, jak i żywienia, podpowiada jak skomponować dietę, żeby zwiększyć efektywność treningów. Polecam jak najbardziej! :)
+                  </p>
+                </div>
+              </a>
+            </li>
+
+            <li class="splide__slide flex justify-center items-center">
+              <a href="https://g.co/kgs/PbMKCE" target="_blank" rel="noopener">
+                <div class="w-96 bg-neutral-900 p-8 rounded-lg">
+                  <div class="flex">
+                    <img class="mr-4 mb-4" src="https://lh3.googleusercontent.com/a-/AD5-WCni1iL7HhHtGZq05tfA4gtv5FgQFFMB8KzYv3-D=s40-c-c0x00000000-cc-rp-mo-br100"/>
+                      <div>
+                        <p class="font-bold">Tomasz Popiołek</p>
+                        <div class="flex">
+                          <img src="assets/star.png" width="16" height="16"/>
+                          <img src="assets/star.png" width="16" height="16"/>
+                          <img src="assets/star.png" width="16" height="16"/>
+                          <img src="assets/star.png" width="16" height="16"/>
+                          <img src="assets/star.png" width="16" height="16"/>
+                        </div>
+                      </div>
+                  </div>
+                  <p>
+                    Pełen profesjonalizm, zaangażowanie w każdy detal treningów. Aktualnie w świeżym super miejscu, wszystko czego do życia osób które chcą odmienić swoje życie znajdziecie tutaj !!! Polecam
+                  </p>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="splide__progress">
+          <div class="splide__progress__slide"></div>
+        </div>
+      </div>
+
     </div>
 
   </main>
@@ -371,6 +524,25 @@
       coverRatio: 1
     })
   </script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    var splide2 = new Splide('#opinions', {
+      type: "loop",
+      autoplay: true,
+      arrows: false,
+      pagination: false
+    });
+    var bar = splide2.root.querySelector( '.splide__progress__slide' );
+
+    splide2.on( 'mounted move', function () {
+      var end  = splide2.Components.Controller.getEnd() + 1;
+      var rate = Math.min( ( splide2.index + 1 ) / end, 1 );
+      bar.style.width = String( 100 * rate ) + '%';
+    } );
+    splide2.mount();
+  })
+</script>
 
   <script>
     AOS.init()

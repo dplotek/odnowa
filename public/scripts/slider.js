@@ -8,7 +8,7 @@ slides.forEach(item => {
 })
 
 document.addEventListener( 'DOMContentLoaded', function() {
-  var splide = new Splide( '.splide', {
+  var splide = new Splide( '#studio_gallery', {
     type: 'loop',
     perPage: 3,
     perMove: 1,
