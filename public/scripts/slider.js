@@ -1,38 +1,21 @@
 const body = document.querySelector("body")
-const slides = [...document.querySelector('#gallery').querySelectorAll("img")]
-slides.forEach(item => {
-  item.addEventListener("click", () => {
-    const src = item.getAttribute("src")
-    createGallery(src)
+const galleries = [...document.querySelectorAll('.splide__list')].map(item => [...item.querySelectorAll("img")])
+galleries.forEach(item => {
+  item.forEach(nestedItem => {
+    nestedItem.addEventListener("click", () => {
+      const src = nestedItem.getAttribute("src")
+      createGallery(src, item)
+    })
   })
 })
 
-document.addEventListener( 'DOMContentLoaded', function() {
-  var splide = new Splide( '#studio_gallery', {
-    type: 'loop',
-    perPage: 3,
-    perMove: 1,
-    autoplay: true,
-    gap: '2rem',
-    breakpoints: {
-      1024: {
-        perPage: 2,
-      },
-      768: {
-        perPage: 1
-      }
-    },
-    classes: {
-      pagination: 'hidden'
-    }
-  } );
-  splide.mount();
-} );
-
 let currentImage 
+let currentGallery
 
-const createGallery = (src) => {
+const createGallery = (src, gallery) => {
   currentImage = src
+  currentGallery = gallery
+
   const galleryWrapper = document.createElement("div")
   galleryWrapper.classList.add("fixed", "top-0", "left-0", "bg-black/[0.6]", "w-screen", "h-screen", "z-10", "flex", "items-center", "justify-center", "p-24") 
 
@@ -51,10 +34,10 @@ const createGallery = (src) => {
   })
 
   const setNextImage = () => {
-    const currentIndex = slides.findIndex(item => item.getAttribute("src") === currentImage)
-    currentImage = currentIndex >= slides.length -1 
-      ? slides[0].getAttribute("src") 
-      : slides[currentIndex + 1].getAttribute("src")
+    const currentIndex = currentGallery.findIndex(item => item.getAttribute("src") === currentImage)
+    currentImage = currentIndex >= currentGallery.length -1 
+      ? currentGallery[0].getAttribute("src") 
+      : currentGallery[currentIndex + 1].getAttribute("src")
 
     imageTag.src = currentImage
   }
@@ -68,10 +51,10 @@ const createGallery = (src) => {
   nextButtonImage.classList.add("rotate-180")
 
   const setPrevImage = () => {
-    const currentIndex = slides.findIndex(item => item.getAttribute("src") === currentImage)
+    const currentIndex = currentGallery.findIndex(item => item.getAttribute("src") === currentImage)
     currentImage = currentIndex === 0
-      ? slides[slides.length -1].getAttribute("src") 
-      : slides[currentIndex - 1].getAttribute("src")
+      ? currentGallery[currentGallery.length -1].getAttribute("src") 
+      : currentGallery[currentIndex - 1].getAttribute("src")
 
     imageTag.src = currentImage
   }
