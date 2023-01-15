@@ -7,10 +7,19 @@
   <title>Nasz zespół - ODNOWA Studio Treningu Personalnego</title>
   <link href="./output.css" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide-core.min.css" rel="stylesheet">
 </head>
+
+<style>
+  .splide__progress__bar {
+    height: 3px;
+    background: #e1ad00;
+    margin-top: 16px;
+  }
+</style>
 <body>
   
-  <nav class="w-full sticky top-0 left-0 bg-black drop-shadow-[0_1px_1px_rgba(255,255,255,0.2)]">
+  <nav class="w-full sticky top-0 left-0 bg-black drop-shadow-[0_1px_1px_rgba(255,255,255,0.2)] z-10">
     <div class="max-w-screen-xl mx-auto flex justify-between items-center px-6">
       <p class="font-oswald text-4xl py-2">
         <a href="./index.html">
@@ -105,6 +114,108 @@
     </div>
   </nav>
 
+  <main>
+    <div class="max-w-screen-xl mx-auto px-6 py-24">
+      <h1 class="text-center text-4xl mb-24 font-oswald uppercase font-bold">
+        Nasz zespół
+      </h1>
+
+      <div class="flex items-center justify-center flex-col md:flex-row">
+        <div class="md:w-1/2 flex items-center justify-center">
+          <div class="bg-secondary rounded-full h-80 w-80 flex items-center justify-center overflow-hidden" data-aos="flip-left" data-aos-offset="200">
+            <img src="assets/patryk.webp" alt="Trener Patryk" data-aos="fade-up" data-aos-offset="300" width="264" height="448"/>
+          </div>
+        </div>
+    
+        <div class="md:w-1/2">
+          <h3 class="text-3xl font-bold font-oswald mb-4">
+            PATRYK NOWAK
+          </h3>
+          <p class="text-lg">
+            Właściciel ODNOWA Studio treningu personalnego. Certyfikowany trener personalny z międzynarodową akredytacją REPs oraz AFAA. Dietetyk z wykształceniem kierunkowym wyższym. Uczestnik licznych szkoleń z zakresu treningu siłowego, programowania treningowego, treningu motorycznego, treningu medycznego oraz dietetyki, w tym sportowej. Od najmłodszych lat związany ze sportem. Pasjonat równowagi życiowej pomiędzy zdrowym trybem życia, a “codziennością”.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-neutral-900">
+      <div class="max-w-screen-xl mx-auto px-6 py-8">
+        <p class="font-oswald text-3xl pb-6">
+          12 Certyfikatów
+        </p>
+        <section class="splide">
+          <div class="splide__slider">
+            <div class="splide__track">
+              <ul class="splide__list" id="gallery">
+                <img src="assets/img/certificates/patryk-certyfikat1.jpg" class="splide__slide cursor-pointer" alt="Studio wewnątrz" width="1618" height="1080"/>
+                <img src="assets/img/certificates/patryk-certyfikat2.jpg" class="splide__slide cursor-pointer" alt="Druga część studia" width="1618" height="1080"/>
+                <img src="assets/img/certificates/patryk-certyfikat3.jpg" class="splide__slide cursor-pointer" alt="Sprzęt do ćwiczeń" width="1618" height="1080"/>
+                <img src="assets/img/certificates/patryk-certyfikat4.jpg" class="splide__slide cursor-pointer" alt="Sprzęt do ćwiczeń" width="1618" height="1080"/>
+                <img src="assets/img/certificates/patryk-certyfikat5.jpg" class="splide__slide cursor-pointer" alt="Sprzęt do ćwiczeń" width="1618" height="1080"/>
+                <img src="assets/img/certificates/patryk-certyfikat6.jpg" class="splide__slide cursor-pointer" alt="Sprzęt do ćwiczeń" width="1618" height="1080"/>
+                <img src="assets/img/certificates/patryk-certyfikat7.jpg" class="splide__slide cursor-pointer" alt="Sprzęt do ćwiczeń" width="1618" height="1080"/>
+                <img src="assets/img/certificates/patryk-certyfikat8.jpg" class="splide__slide cursor-pointer" alt="Sprzęt do ćwiczeń" width="1618" height="1080"/>
+                <img src="assets/img/certificates/patryk-certyfikat9.jpg" class="splide__slide cursor-pointer" alt="Sprzęt do ćwiczeń" width="1618" height="1080"/>
+                <img src="assets/img/certificates/patryk-certyfikat10.jpg" class="splide__slide cursor-pointer" alt="Sprzęt do ćwiczeń" width="1618" height="1080"/>
+                <img src="assets/img/certificates/patryk-certyfikat11.jpg" class="splide__slide cursor-pointer" alt="Sprzęt do ćwiczeń" width="1618" height="1080"/>
+                <img src="assets/img/certificates/patryk-certyfikat12.jpg" class="splide__slide cursor-pointer" alt="Sprzęt do ćwiczeń" width="1618" height="1080"/>
+              </ul>
+            </div>
+          </div>
+        
+          <div class="splide__progress">
+            <div class="splide__progress__bar">
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+      <div class="flex items-center justify-center flex-col md:flex-row max-w-screen-xl mx-auto px-6 py-24">
+        <div class="md:w-1/2">
+          <h3 class="text-3xl font-bold font-oswald mb-4">
+            MIKOŁAJ ŁYSEK
+          </h3>
+          <p class="text-lg">
+            Licencjonowany trener personalny. Aktywny zawodnik trójboju siłowego z licznymi osiągnięciami. Uczestnik szkoleń z zakresu żywienia w sporcie, treningu medycznego oraz korekcji wad postawy. Pasjonat treningu siłowego, trójboju siłowego oraz leczenia ruchem. Specjalizuje się w ćwiczeniach korekcyjnych, rehabilitacyjnych oraz ćwiczeniach siłowych. Efektem jego pracy jest satysfakcja i radość z odmiany jakości życia klientów.
+          </p>
+        </div>
+
+        <div class="md:w-1/2 flex items-center justify-center">
+          <div class="bg-secondary rounded-full h-80 w-80 flex items-center justify-center overflow-hidden" data-aos="flip-left" data-aos-offset="200">
+            <img src="assets/patryk.webp" alt="Trener Mikołaj" data-aos="fade-up" data-aos-offset="300" width="264" height="448"/>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-neutral-900">
+      <div class="max-w-screen-xl mx-auto px-6 py-8">
+        <p class="font-oswald text-3xl pb-6">
+          4 Certyfikaty
+        </p>
+        <section class="splide">
+          <div class="splide__slider">
+            <div class="splide__track">
+              <ul class="splide__list" id="gallery2">
+                <img src="assets/img/certificates/mikolaj-certyfikat1.jpg" class="splide__slide cursor-pointer" alt="Studio wewnątrz" width="1618" height="1080"/>
+                <img src="assets/img/certificates/mikolaj-certyfikat2.jpg" class="splide__slide cursor-pointer" alt="Druga część studia" width="1618" height="1080"/>
+                <img src="assets/img/certificates/mikolaj-certyfikat3.jpg" class="splide__slide cursor-pointer" alt="Sprzęt do ćwiczeń" width="1618" height="1080"/>
+                <img src="assets/img/certificates/mikolaj-certyfikat4.jpg" class="splide__slide cursor-pointer" alt="Sprzęt do ćwiczeń" width="1618" height="1080"/>
+              </ul>
+            </div>
+          </div>
+        
+          <div class="splide__progress">
+            <div class="splide__progress__bar">
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+  </main>
+
 
   <footer class="mt-12 pt-12 pb-24 bg-neutral-900 w-full">
     <div class="max-w-screen-xl mx-auto flex px-6 flex-col md:flex-row">
@@ -155,5 +266,37 @@
   </div>
 
   <script src="./scripts/menu.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+
+  <script src="scripts/slider.js">
+  </script>
+
+<script>
+  document.addEventListener( 'DOMContentLoaded', function() {
+  var elms = document.getElementsByClassName( 'splide' );
+
+  for(var i = 0; i < elms.length; i++) {
+    new Splide(elms[i], {
+      type: 'loop',
+      perPage: 3,
+      perMove: 3,
+      autoplay: true,
+      arrows: false,
+      gap: '2rem',
+      breakpoints: {
+        1024: {
+          perPage: 2,
+        },
+        768: {
+          perPage: 1
+        }
+      },
+      classes: {
+        pagination: 'hidden'
+      }
+    }).mount()
+  }
+  })
+  </script>
 </body>
 </html>
