@@ -8,8 +8,18 @@
   <link href="./output.css" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
+<style>
+  input[type="number"]::-webkit-outer-spin-button,
+  input[type="number"]::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+  }
+  input[type="number"] {
+      -moz-appearance: textfield;
+}
+</style>
 <body>
-    <nav class="w-full sticky top-0 left-0 bg-black drop-shadow-[0_1px_1px_rgba(255,255,255,0.2)]">
+  <nav class="w-full sticky top-0 left-0 bg-black drop-shadow-[0_1px_1px_rgba(255,255,255,0.2)]">
     <div class="max-w-screen-xl mx-auto flex justify-between items-center px-6">
       <p class="font-oswald text-4xl py-2">
         <a href="./index.html">
@@ -100,6 +110,96 @@
       </div>
     </div>
   </nav>
+
+  <div class="max-w-screen-xl mx-auto px-6 py-24">
+    <h2 class="text-center text-3xl font-oswald">
+      Kalkulator kalorii
+    </h2>
+    <p class="text-center text-xl mt-8">Oblicz, ile musisz jeść kalorii, żeby osiągnąć swój cel</p>
+
+    <div class="flex mt-12 justify-between">
+      <div class="bg-neutral-900 w-full p-8 rounded-lg" >
+        <div>
+          <p class="font-bold text-lg mb-2">
+            Płeć*
+          </p>
+          <input type="radio" id="male" name="gender">
+          <label for="male" class="mr-12">Mężczyzna</label>
+          <input type="radio" id="female" name="gender">
+          <label for="female">Kobieta</label>
+        </div>
+
+        <div>
+          <label class="font-bold text-lg mb-2 mt-4 block" for="weight">
+            Waga*
+          </label>
+          <input 
+            id="weight"
+            type="number" 
+            placeholder="Wpisz wagę w kg" 
+            class="bg-transparent border-b-2 border-[#e1ad00] outline-none"
+          />
+        </div>
+
+        <div>
+          <label class="font-bold text-lg mb-2 mt-4 block" for="age">
+            Wiek*
+          </label>
+          <input 
+            id="age"
+            type="number" 
+            placeholder="Wpisz swój wiek" 
+            class="bg-transparent border-b-2 border-[#e1ad00] outline-none"
+          />
+        </div>
+
+        <div>
+          <label class="font-bold text-lg mb-2 mt-4 block" for="height">
+            Wzrost*
+          </label>
+          <input 
+            id="height"
+            type="number" 
+            placeholder="Wpisz swój wzrost w cm" 
+            class="bg-transparent border-b-2 border-[#e1ad00] outline-none"
+          />
+        </div>
+
+        <div>
+          <p class="font-bold text-lg mb-2 mt-4">
+            Aktywność fizyczna*
+          </p>
+          <input type="range"/>
+        </div>
+
+        <div>
+          <p class="font-bold text-lg mb-2 mt-4">
+            Cel diety*
+          </p>
+          <div class="pb-1">
+            <input type="radio" id="lose" name="goal">
+            <label for="lose" class="mr-12">Chcę schudnąć</label>
+          </div>
+          <div class="py-1">
+            <input type="radio" id="hold" name="goal">
+            <label for="hold">Chcę utrzymać wagę</label>
+          </div>
+          <div class="py-1">
+            <input type="radio" id="gain" name="goal">
+            <label for="gain">Chcę przytyć</label>
+          </div>
+        </div>
+
+        <button class="bg-secondary px-6 py-2 rounded-lg text-black mt-8">
+          Oblicz
+        </button>
+      </div>
+
+      <div class="w-full">
+        asjdiajisdjiasjidjiasdijajisdji
+      </div>
+    </div>
+  </div>
 
   <footer class="mt-12 pt-12 pb-24 bg-neutral-900 w-full">
     <div class="max-w-screen-xl mx-auto flex px-6 flex-col md:flex-row">
