@@ -120,12 +120,14 @@
     <div class="flex mt-12 justify-between">
       <div class="bg-neutral-900 w-full p-8 rounded-lg" >
         <div>
-          <p class="font-bold text-lg mb-2">
-            Płeć*
-          </p>
-          <input type="radio" id="male" name="gender">
+          <div class="flex" id="gender_field">
+            <p class="font-bold text-lg mb-2">
+              Płeć*
+            </p>
+          </div>
+          <input type="radio" id="male" name="gender" value="MALE">
           <label for="male" class="mr-12">Mężczyzna</label>
-          <input type="radio" id="female" name="gender">
+          <input type="radio" id="female" name="gender" value="FEMALE">
           <label for="female">Kobieta</label>
         </div>
 
@@ -169,7 +171,16 @@
           <p class="font-bold text-lg mb-2 mt-4">
             Aktywność fizyczna*
           </p>
-          <input type="range"/>
+          <div class="flex">
+            <input 
+              type="range" 
+              id="physical_activity_slider"
+              min="0"
+              max="30"
+              value="0"
+            />
+            <p class="ml-4 font-bold" id="physical_activity_paragraph">1</p>
+          </div>
         </div>
 
         <div>
@@ -177,26 +188,29 @@
             Cel diety*
           </p>
           <div class="pb-1">
-            <input type="radio" id="lose" name="goal">
+            <input type="radio" id="lose" name="goal" value="goal1">
             <label for="lose" class="mr-12">Chcę schudnąć</label>
           </div>
           <div class="py-1">
-            <input type="radio" id="hold" name="goal">
+            <input type="radio" id="hold" name="goal" value="goal2">
             <label for="hold">Chcę utrzymać wagę</label>
           </div>
           <div class="py-1">
-            <input type="radio" id="gain" name="goal">
+            <input type="radio" id="gain" name="goal" value="goal3">
             <label for="gain">Chcę przytyć</label>
           </div>
         </div>
 
-        <button class="bg-secondary px-6 py-2 rounded-lg text-black mt-8">
+        <button 
+          class="bg-secondary px-6 py-2 rounded-lg text-black mt-8"
+          id="calculate"
+        >
           Oblicz
         </button>
       </div>
 
       <div class="w-full">
-        asjdiajisdjiasjidjiasdijajisdji
+        <p id="result"></p>
       </div>
     </div>
   </div>
@@ -250,5 +264,6 @@
   </div>
 
   <script src="./scripts/menu.js"></script>
+  <script src="./scripts/kcalCalculator.js"></script>
 </body>
 </html>
