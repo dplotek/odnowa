@@ -111,16 +111,16 @@
     </div>
   </nav>
 
-  <div class="max-w-screen-xl mx-auto px-6 py-24">
+  <div class="max-w-screen-xl mx-auto px-6 py-24" id="form_wrapper">
     <h2 class="text-center text-3xl font-oswald">
       Kalkulator kalorii
     </h2>
-    <p class="text-center text-xl mt-8">Oblicz, ile musisz jeść kalorii, żeby osiągnąć swój cel</p>
+    <p class="text-center text-xl mt-8">Oblicz ile musisz spożywać kalorii, aby osiągnąć swój cel</p>
 
-    <div class="flex mt-12 justify-between">
+    <div class="flex mt-12 justify-between" id="form">
       <div class="bg-neutral-900 w-full p-8 rounded-lg" >
-        <div>
-          <div class="flex" id="gender_field">
+        <div class="mb-4">
+          <div class="flex items-center" id="gender_field">
             <p class="font-bold text-lg mb-2">
               Płeć*
             </p>
@@ -131,10 +131,12 @@
           <label for="female">Kobieta</label>
         </div>
 
-        <div>
-          <label class="font-bold text-lg mb-2 mt-4 block" for="weight">
-            Waga*
-          </label>
+        <div class="mb-2">
+          <div class="flex items-center" id="weight_field">
+            <label class="font-bold text-lg block mb-2" for="weight">
+              Waga*
+            </label>
+          </div>
           <input 
             id="weight"
             type="number" 
@@ -143,10 +145,12 @@
           />
         </div>
 
-        <div>
-          <label class="font-bold text-lg mb-2 mt-4 block" for="age">
-            Wiek*
-          </label>
+        <div class="mt-4">
+          <div class="flex items-center" id="age_field">
+            <label class="font-bold text-lg mb-2 block" for="age">
+              Wiek*
+            </label>
+          </div>
           <input 
             id="age"
             type="number" 
@@ -155,10 +159,12 @@
           />
         </div>
 
-        <div>
-          <label class="font-bold text-lg mb-2 mt-4 block" for="height">
-            Wzrost*
-          </label>
+        <div class="mt-4">
+          <div class="flex items-center" id="height_field">
+            <label class="font-bold text-lg mb-2 block" for="height">
+              Wzrost*
+            </label>
+          </div>
           <input 
             id="height"
             type="number" 
@@ -181,12 +187,24 @@
             />
             <p class="ml-4 font-bold" id="physical_activity_paragraph">1</p>
           </div>
+          <p class="mt-2">
+            1.3 - osoba leżąca; choroba; całkowity brak ruchu <br/>
+            1.4 - siedzący tryb życia; ~6000 kroków dziennie <br/>
+            1.45 - nisko aktywny tryb życia; praca biurowa; większość dnia na siedząco; 1-2x lekkie treningi w tygodniu; ~8000 kroków <br/>
+            1.55 - średnio aktywny tryb życia; praca siedząca; 2-3x lekkie treningi w tygodniu; ~10000 kroków dziennie <br/>
+            1.6 - umiarkowanie aktywny tryb życia; 3-4x normalne treningi w tygodniu; ~10000-12000 kroków dziennie <br/>
+            1.7 - aktywny tryb życia; 4-5x treningów w tygodniu lub praca fizyczna; >12000 kroków dziennie <br/>
+            1.8 - aktywny tryb życia; 5-6x treningów w tygodniu; >10000 kroków dziennie <br/>
+            2.0 - bardzo aktywny tryb życia; uprawianie sportu zawodowo; więcej niż 6 treningów w tygodniu <br/>
+          </p>
         </div>
 
-        <div>
-          <p class="font-bold text-lg mb-2 mt-4">
-            Cel diety*
-          </p>
+        <div class="mt-4">
+          <div class="flex items-center" id="goal_field">
+            <p class="font-bold text-lg mb-2">
+              Cel diety*
+            </p>
+          </div>
           <div class="pb-1">
             <input type="radio" id="lose" name="goal" value="goal1">
             <label for="lose" class="mr-12">Chcę schudnąć</label>
