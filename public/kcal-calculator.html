@@ -280,10 +280,14 @@
   </footer>
   
   <div class="max-w-screen-xl mx-auto my-4 px-6 font-bold">
-    Prawa autorskie © ODNOWA <span class="text-secondary">Studio Treningu Personalnego</span>. Wszelkie prawa zastrzeżone.
+    Prawa autorskie <span id="year"></span> © ODNOWA <span class="text-secondary">Studio Treningu Personalnego</span>. Wszelkie prawa zastrzeżone.
   </div>
 
   <script src="./scripts/menu.js"></script>
   <script src="./scripts/kcalCalculator.js"></script>
+  <script>
+    const year = document.getElementById("year")
+    year.textContent = new Date().getFullYear()
+  </script>
 </body>
 </html>
