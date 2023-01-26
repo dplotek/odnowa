@@ -67,6 +67,10 @@ const createSummaryReport = (gender, age, weight, height, goal, kcal, protein, c
 
   const fatInfo = document.createElement("div")
   fatInfo.innerHTML = `<p>Tłuszcz: <strong>${fat}g</strong> co daje <strong>${fat * 9}kcal</strong> z tłuszczy</p>`
+
+  const info = document.createElement("p")
+  info.classList.add("mt-8")
+  info.textContent = 'Informacje te są przeznaczone dla osób dorosłych (w wieku 18 lat lub starszych), a nie dla osób młodszych, kobiet w ciąży lub karmiących piersią. Celem tych informacji nie jest udzielenie porady medycznej. Jeśli masz konkretne pytania zdrowotne, skonsultuj się ze swoim lekarzem.'
   
   wrapper.appendChild(header)
   wrapper.appendChild(description)
@@ -74,6 +78,7 @@ const createSummaryReport = (gender, age, weight, height, goal, kcal, protein, c
   wrapper.appendChild(proteinInfo)
   wrapper.appendChild(carboInfo)
   wrapper.appendChild(fatInfo)
+  wrapper.appendChild(info)
   formWrapper.appendChild(wrapper)
 }
 
