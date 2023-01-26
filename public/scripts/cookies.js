@@ -29,7 +29,7 @@ if(!cookiesValue) {
   const moreInfoButton = document.createElement("a")
   moreInfoButton.classList.add("bg-transparent", "px-6", "py-2", "rounded-lg", "text-black", "ml-2", "border-2", "border-secondary")
   moreInfoButton.textContent = "Dowiedz się więcej"
-  moreInfoButton.setAttribute("href", "privacy-policy.html")
+  moreInfoButton.setAttribute("href", "polityka-prywatnosci")
 
   wrapper.appendChild(cookiesText)
   wrapper.appendChild(removeCookiesContainerButton)
