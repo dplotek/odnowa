@@ -131,8 +131,8 @@
   </nav>
 
   <div class="relative bg-black/[.4]">
-    <img class="hero-image" data-image="assets/herosection.webp" alt="Trener w studiu"></img>
-    <div class="absolute top-2/3 md:top-3/4 left-1/2 transform -translate-x-1/2 text-center text-2xl md:text-5xl">
+    <img src="assets/herosection.webp" class="w-full max-h-screen"/>
+    <div class="absolute bottom-0 left-1/2 transform -translate-x-1/2 text-center text-2xl md:text-5xl">
       <p class="mb-4">
         Zadbaj z Nami o swoje zdrowie
       </p>
@@ -572,9 +572,6 @@
   <script src="./scripts/slider.js"></script>
   <script src="./scripts/cookies.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
-  <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/parallax-imagescroll@0.2.3/jquery.imageScroll.min.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
   <script>
@@ -598,15 +595,6 @@
       js.src = 'https://connect.facebook.net/pl_PL/sdk/xfbml.customerchat.js';
       fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));
-  </script>
-
-  <script>
-    const touch = Modernizr.touch;
-    $('.hero-image').imageScroll({
-      imageAttribute: (touch === true) ? "image-mobile" : "image",
-      touch: touch,
-      coverRatio: 1,
-    })
   </script>
 
   <script>
