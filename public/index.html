@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pl">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,7 +10,8 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet">
-  <meta name="description" content="ODNOWA została stworzona z myślą by pomóc w poprawie zdrowia i realizacji celów. Wykwalifikowani trenerzy pomogą Ci w realizacji Twoich celów."/>
+  <meta name="description"
+    content="ODNOWA została stworzona z myślą by pomóc w poprawie zdrowia i realizacji celów. Wykwalifikowani trenerzy pomogą Ci w realizacji Twoich celów." />
   <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
@@ -24,7 +26,7 @@
     background: #ccc;
     margin-top: 24px;
   }
-  
+
   .splide__progress__slide {
     background: #e1ad00;
     height: 2px;
@@ -70,30 +72,15 @@
           </a>
         </li>
       </ul>
-      
-      <button 
-        class="md:hidden w-6 h-6 flex items-center justify-center relative"
-        id="nav-toggler"
-        aria-label="menu"
-      >
-        <span 
-          class="transform transition w-full h-px bg-white -translate-y-2 absolute"
-          id="hamburger1"
-        ></span>
-        <span 
-          class="transform transition w-full h-px bg-white absolute"
-          id="hamburger2"
-        ></span>
-        <span 
-          class="transform transition w-full h-px bg-white translate-y-2 absolute"
-          id="hamburger3"
-        ></span>
+
+      <button class="md:hidden w-6 h-6 flex items-center justify-center relative" id="nav-toggler" aria-label="menu">
+        <span class="transform transition w-full h-px bg-white -translate-y-2 absolute" id="hamburger1"></span>
+        <span class="transform transition w-full h-px bg-white absolute" id="hamburger2"></span>
+        <span class="transform transition w-full h-px bg-white translate-y-2 absolute" id="hamburger3"></span>
       </button>
 
-      <div 
-        class="transform transition -translate-x-full md:hidden absolute left-0 top-0 -z-10 w-full min-h-screen flex" 
-        id="mobile-menu"
-      >
+      <div class="transform transition -translate-x-full md:hidden absolute left-0 top-0 -z-10 w-full min-h-screen flex"
+        id="mobile-menu">
         <ul class="text-lg font-bold bg-black pl-6 h-screen w-2/3 pt-16">
           <li class="mr-4">
             <a href="/" class="border-yellow-600 border-b-2">
@@ -122,30 +109,37 @@
           </li>
         </ul>
 
-        <div 
-          class="bg-black w-1/3 opacity-60"
-          id="menu-backdrop"
-        ></div>
+        <div class="bg-black w-1/3 opacity-60" id="menu-backdrop"></div>
       </div>
     </div>
   </nav>
 
   <div class="relative bg-black/[.4]">
-    <img src="assets/herosection.webp" class="w-full max-h-screen"/>
-    <div class="absolute bottom-0 left-1/2 transform -translate-x-1/2 text-center text-2xl md:text-5xl">
-      <p class="mb-4">
-        Zadbaj z Nami o swoje zdrowie
-      </p>
-      <p class="font-oswald">
-        <span class="font-extralight">OD</span><span class="font-semibold">NOWA</span>
-      </p>
-      <div class="mt-8 animate-bounce flex justify-center items-center ">
-        <div class="bg-secondary h-12 w-12 rounded-full flex align-center justify-center items-center flex-col">
-          <svg class="h-10 w-10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="000" aria-hidden="true">
-            <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
-          </svg>
+    <img src="assets/herosection.webp" class="w-full max-h-screen" />
+    <div class="absolute bottom-0 left-1/2 transform -translate-x-1/2 text-center ">
+      <div class="bg-black/60 p-4 rounded-md my-4">
+        <div class="texl-md md:text-2xl">
+          <p class="mb-1 lg:mb-4">
+            Umów się na bezpłatną konsultację już teraz, aby dowiedzieć się, jak możesz rozpocząć METAMORFOZĘ.
+          </p>
         </div>
+        <form name="contact-form">
+          <input name="Imię i nazwisko"
+            class="mb-2 block w-full rounded-md border-0 py-1.5 px-2 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 text-sm sm:leading-6"
+            placeholder="Imię i nazwisko" required />
+          <input name="Numer"
+            class="mb-2 block w-full rounded-md border-0 py-1.5 px-2 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 text-sm sm:leading-6"
+            placeholder="Numer telefonu" required />
+          <div class="bg-green-800 p-4 rounded-md hidden" id="infobox">
+            <p>Wysłano! Wkrótce się skontaktujemy.</p>
+          </div>
+          <button type="submit" id="submit" class="px-4 py-2 bg-secondary text-black text-md rounded-md my-2"
+            style="background-color:#e1ad00;">
+            Wyślij
+          </button>
+        </form>
       </div>
+
     </div>
   </div>
 
@@ -157,15 +151,20 @@
 
       <div class="flex items-center justify-center flex-col md:flex-row">
         <div class="md:w-1/2 flex items-center justify-center">
-          <img src="assets/patryk.webp" alt="Trener Patryk" data-aos="fade-up" data-aos-offset="300" width="264" height="448" data-aos="flip-left" data-aos-offset="200"/>
+          <img src="assets/patryk.webp" alt="Trener Patryk" data-aos="fade-up" data-aos-offset="300" width="264"
+            height="448" data-aos="flip-left" data-aos-offset="200" />
         </div>
-    
+
         <div class="md:w-1/2">
           <h3 class="text-3xl font-bold font-oswald mb-4">
             PATRYK NOWAK
           </h3>
           <p class="text-lg">
-            Właściciel ODNOWA Studio treningu personalnego. Certyfikowany trener personalny z międzynarodową akredytacją REPs oraz AFAA. Dietetyk z wykształceniem kierunkowym wyższym. Uczestnik licznych szkoleń z zakresu treningu siłowego, programowania treningowego, treningu motorycznego, treningu medycznego oraz dietetyki, w tym sportowej. Od najmłodszych lat związany ze sportem. Pasjonat równowagi życiowej pomiędzy zdrowym trybem życia, a “codziennością”.
+            Właściciel ODNOWA Studio treningu personalnego. Certyfikowany trener personalny z międzynarodową akredytacją
+            REPs oraz AFAA. Dietetyk z wykształceniem kierunkowym wyższym. Uczestnik licznych szkoleń z zakresu treningu
+            siłowego, programowania treningowego, treningu motorycznego, treningu medycznego oraz dietetyki, w tym
+            sportowej. Od najmłodszych lat związany ze sportem. Pasjonat równowagi życiowej pomiędzy zdrowym trybem
+            życia, a “codziennością”.
           </p>
         </div>
       </div>
@@ -176,12 +175,16 @@
             MATEUSZ KŁODAWSKI
           </h3>
           <p class="text-lg">
-            Certyfikowany, międzynarodowy trener personalny, który zdobył powyższy tytuł w Akademii Mistrzostwa Sportowego we Wrocławiu. Swoją wiedzę w zakresie treningu pogłębił też licznymi szkoleniami, a także literaturą. Zamiłowanie do sportu ma już od najmłodszych lat, a teraz postanowił zarazić nim innych. Uczy poprawnej techniki wykonywanych ćwiczeń, koryguje wady postawy, a także podpowiada w kwestiach żywieniowych
+            Certyfikowany, międzynarodowy trener personalny, który zdobył powyższy tytuł w Akademii Mistrzostwa
+            Sportowego we Wrocławiu. Swoją wiedzę w zakresie treningu pogłębił też licznymi szkoleniami, a także
+            literaturą. Zamiłowanie do sportu ma już od najmłodszych lat, a teraz postanowił zarazić nim innych. Uczy
+            poprawnej techniki wykonywanych ćwiczeń, koryguje wady postawy, a także podpowiada w kwestiach żywieniowych
           </p>
         </div>
 
         <div class="md:w-1/2 flex items-center justify-center">
-          <img src="assets/mateusz.webp" alt="Trener Mateusz" data-aos="fade-up" data-aos-offset="300" width="264" height="448" data-aos="flip-left" data-aos-offset="200"/>
+          <img src="assets/mateusz.webp" alt="Trener Mateusz" data-aos="fade-up" data-aos-offset="300" width="264"
+            height="448" data-aos="flip-left" data-aos-offset="200" />
         </div>
       </div>
     </div>
@@ -189,7 +192,7 @@
     <div class="bg-neutral-900">
       <div class="max-w-screen-xl mx-auto px-6 py-16 grid grid-cols-1 lg:grid-cols-4 gap-4">
         <div class="flex items-center">
-          <img src="assets/heart.svg" alt="serce" width="80" height="80"/>
+          <img src="assets/heart.svg" alt="serce" width="80" height="80" />
           <div class="ml-4">
             <p class="text-4xl font-bold">
               150+
@@ -201,7 +204,7 @@
         </div>
 
         <div class="flex items-center">
-          <img src="assets/dumbbell.svg" alt="hantel" width="80" height="80"/>
+          <img src="assets/dumbbell.svg" alt="hantel" width="80" height="80" />
           <div class="ml-4">
             <p class="text-4xl font-bold">
               10 000+
@@ -213,7 +216,7 @@
         </div>
 
         <div class="flex items-center">
-          <img src="assets/certificate.svg" alt="certyfikaty" width="80" height="80"/>
+          <img src="assets/certificate.svg" alt="certyfikaty" width="80" height="80" />
           <div class="ml-4">
             <p class="text-4xl font-bold">
               26
@@ -225,7 +228,7 @@
         </div>
 
         <div class="flex items-center">
-          <img src="assets/calendar.svg" alt="kalendarz" width="80" height="80"/>
+          <img src="assets/calendar.svg" alt="kalendarz" width="80" height="80" />
           <div class="ml-4">
             <p class="text-4xl font-bold">
               8
@@ -246,26 +249,30 @@
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
         <div class="bg-neutral-900 px-6 py-12 rounded-lg">
           <div class="bg-yellow-500/[0.3] inline-block p-4 rounded-full">
-            <img src="assets/person.svg" alt="ikona osoby" width="42" height="42"/>
+            <img src="assets/person.svg" alt="ikona osoby" width="42" height="42" />
           </div>
           <h3 class="text-2xl font-oswald font-bold my-4">
             Trening personalny
           </h3>
           <p>
-            Trening personalny jest przeznaczony dla osób chcących trenować w pojedynkę z trenerem. Trener prowadzi cały przebieg treningu. Kontroluje technikę wykonywanych ćwiczeń, ustala indywidualny plan treningowy czy podpowiada w kwestiach żywieniowych.
+            Trening personalny jest przeznaczony dla osób chcących trenować w pojedynkę z trenerem. Trener prowadzi cały
+            przebieg treningu. Kontroluje technikę wykonywanych ćwiczeń, ustala indywidualny plan treningowy czy
+            podpowiada w kwestiach żywieniowych.
           </p>
         </div>
 
         <div class="bg-neutral-900 px-6 py-12 rounded-lg">
           <div class="bg-yellow-500/[0.3] inline-block p-4 rounded-full">
-            <img src="assets/persons.svg" alt="ikona dwóch osób" width="42" height="42"/>
+            <img src="assets/persons.svg" alt="ikona dwóch osób" width="42" height="42" />
           </div>
           <div>
             <h3 class="text-2xl font-oswald font-bold my-4">
               Trening duetowy
             </h3>
             <p>
-              Trening duetowy jest przeznaczony dla osób chcących trenować z drugą bliską mu osobą oraz trenerem. Trener prowadzi cały przebieg treningu. Kontroluje technikę wykonywanych ćwiczeń, ustala indywidualny plan treningowy czy podpowiada w kwestiach żywieniowych.
+              Trening duetowy jest przeznaczony dla osób chcących trenować z drugą bliską mu osobą oraz trenerem. Trener
+              prowadzi cały przebieg treningu. Kontroluje technikę wykonywanych ćwiczeń, ustala indywidualny plan
+              treningowy czy podpowiada w kwestiach żywieniowych.
             </p>
           </div>
         </div>
@@ -287,22 +294,29 @@
         <section class="splide" id="studio_gallery">
           <div class="splide__arrows">
             <button class="splide__arrow splide__arrow--prev">
-              <img src="assets/left-arrow.svg" alt="strzałka w lewo" width="32" height="32"/>
+              <img src="assets/left-arrow.svg" alt="strzałka w lewo" width="32" height="32" />
             </button>
             <button class="splide__arrow splide__arrow--next rotate-180">
-              <img src="assets/left-arrow.svg" alt="strzałka w prawo" width="32" height="32"/>
+              <img src="assets/left-arrow.svg" alt="strzałka w prawo" width="32" height="32" />
             </button>
-          <div class="splide__track">
-            <ul class="splide__list" id="gallery">
-              <img src="assets/img/studio/studio1.webp" class="splide__slide cursor-pointer" alt="Studio wewnątrz" width="1618" height="1080"/>
-              <img src="assets/img/studio/studio2.webp" class="splide__slide cursor-pointer" alt="Druga część studia" width="1618" height="1080"/>
-              <img src="assets/img/studio/studio3.webp" class="splide__slide cursor-pointer" alt="Sprzęt do ćwiczeń" width="1618" height="1080"/>
-              <img src="assets/img/studio/studio4.webp" class="splide__slide cursor-pointer" alt="Hantle do ćwiczeń" width="1618" height="1080"/>
-              <img src="assets/img/studio/studio5.webp" class="splide__slide cursor-pointer" alt="Biuro" width="1618" height="1080"/>
-              <img src="assets/img/studio/studio6.webp" class="splide__slide cursor-pointer" alt="Wejście do studia" width="1618" height="1080"/>
-              <img src="assets/img/studio/studio7.webp" class="splide__slide cursor-pointer" alt="Budynek z zewnątrz" width="1618" height="1080"/>
-            </ul>
-          </div>
+            <div class="splide__track">
+              <ul class="splide__list" id="gallery">
+                <img src="assets/img/studio/studio1.webp" class="splide__slide cursor-pointer" alt="Studio wewnątrz"
+                  width="1618" height="1080" />
+                <img src="assets/img/studio/studio2.webp" class="splide__slide cursor-pointer" alt="Druga część studia"
+                  width="1618" height="1080" />
+                <img src="assets/img/studio/studio3.webp" class="splide__slide cursor-pointer" alt="Sprzęt do ćwiczeń"
+                  width="1618" height="1080" />
+                <img src="assets/img/studio/studio4.webp" class="splide__slide cursor-pointer" alt="Hantle do ćwiczeń"
+                  width="1618" height="1080" />
+                <img src="assets/img/studio/studio5.webp" class="splide__slide cursor-pointer" alt="Biuro" width="1618"
+                  height="1080" />
+                <img src="assets/img/studio/studio6.webp" class="splide__slide cursor-pointer" alt="Wejście do studia"
+                  width="1618" height="1080" />
+                <img src="assets/img/studio/studio7.webp" class="splide__slide cursor-pointer" alt="Budynek z zewnątrz"
+                  width="1618" height="1080" />
+              </ul>
+            </div>
         </section>
       </div>
     </div>
@@ -312,31 +326,33 @@
         OPINIE
       </h2>
 
-      <div class="splide" id="opinions" >
+      <div class="splide" id="opinions">
         <div class="splide__track">
           <ul class="splide__list">
             <li class="splide__slide flex justify-center items-center">
               <a href="https://g.co/kgs/o75NF3" target="_blank" rel="noopener">
                 <div class="w-96 bg-neutral-900 p-8 rounded-lg">
                   <div class="flex">
-                    <img class="mr-4 mb-4" width="40" height="40" src="https://lh3.googleusercontent.com/a/AEdFTp6uV0Vk-xi8HDR_uKtSWdXVB_S1lfqwJa0Ev2e11A=s40-c-c0x00000000-cc-rp-mo-br100" alt="avatar użytkownika"/>
-                      <div>
-                        <p class="font-bold">TaHaPL</p>
-                        <div class="flex">
-                          <img src="assets/star.png" width="16" height="16" alt="gwiazdka"/>
-                          <img src="assets/star.png" width="16" height="16" alt="gwiazdka"/>
-                          <img src="assets/star.png" width="16" height="16" alt="gwiazdka"/>
-                          <img src="assets/star.png" width="16" height="16" alt="gwiazdka"/>
-                          <img src="assets/star.png" width="16" height="16" alt="gwiazdka"/>
-                        </div>
+                    <img class="mr-4 mb-4" width="40" height="40"
+                      src="https://lh3.googleusercontent.com/a/AEdFTp6uV0Vk-xi8HDR_uKtSWdXVB_S1lfqwJa0Ev2e11A=s40-c-c0x00000000-cc-rp-mo-br100"
+                      alt="avatar użytkownika" />
+                    <div>
+                      <p class="font-bold">TaHaPL</p>
+                      <div class="flex">
+                        <img src="assets/star.png" width="16" height="16" alt="gwiazdka" />
+                        <img src="assets/star.png" width="16" height="16" alt="gwiazdka" />
+                        <img src="assets/star.png" width="16" height="16" alt="gwiazdka" />
+                        <img src="assets/star.png" width="16" height="16" alt="gwiazdka" />
+                        <img src="assets/star.png" width="16" height="16" alt="gwiazdka" />
                       </div>
+                    </div>
                   </div>
                   <p>
-                    Bardzo profesjonalne miejsce na mapie Kalisza. 
-                    Studio posiada wszystkie niezbędne przyrządy 
-                    do kształtowania sylwetki, aparatu ruchu i ogólnie zdrowia. 
-                    Trenerzy wyróżniają się doskonałą wiedzą i zaangażowaniem. 
-                    Zgubiłem już 6kg, samopoczucie dużo lepsze, produktywność w pracy na plus. 
+                    Bardzo profesjonalne miejsce na mapie Kalisza.
+                    Studio posiada wszystkie niezbędne przyrządy
+                    do kształtowania sylwetki, aparatu ruchu i ogólnie zdrowia.
+                    Trenerzy wyróżniają się doskonałą wiedzą i zaangażowaniem.
+                    Zgubiłem już 6kg, samopoczucie dużo lepsze, produktywność w pracy na plus.
                     Nie wyobrażam sobie rezygnacji z treningów u chłopaków. Polecam!!!
                   </p>
                 </div>
@@ -347,20 +363,28 @@
               <a href="https://g.co/kgs/EtEZXE" target="_blank" rel="noopener">
                 <div class="w-96 bg-neutral-900 p-8 rounded-lg">
                   <div class="flex">
-                    <img class="mr-4 mb-4" width="40" height="40" src="https://lh3.googleusercontent.com/a-/AD5-WCnVjH3LuhVYSk15akqPHSNm0O_WPdVYz_EYTEDPUQ=s40-c-c0x00000000-cc-rp-mo-br100" alt="avatar użytkownika"/>
-                      <div>
-                        <p class="font-bold">Justyna N</p>
-                        <div class="flex">
-                          <img src="assets/star.png" width="16" height="16" alt="gwiazdka"/>
-                          <img src="assets/star.png" width="16" height="16" alt="gwiazdka"/>
-                          <img src="assets/star.png" width="16" height="16" alt="gwiazdka"/>
-                          <img src="assets/star.png" width="16" height="16" alt="gwiazdka"/>
-                          <img src="assets/star.png" width="16" height="16" alt="gwiazdka"/>
-                        </div>
+                    <img class="mr-4 mb-4" width="40" height="40"
+                      src="https://lh3.googleusercontent.com/a-/AD5-WCnVjH3LuhVYSk15akqPHSNm0O_WPdVYz_EYTEDPUQ=s40-c-c0x00000000-cc-rp-mo-br100"
+                      alt="avatar użytkownika" />
+                    <div>
+                      <p class="font-bold">Justyna N</p>
+                      <div class="flex">
+                        <img src="assets/star.png" width="16" height="16" alt="gwiazdka" />
+                        <img src="assets/star.png" width="16" height="16" alt="gwiazdka" />
+                        <img src="assets/star.png" width="16" height="16" alt="gwiazdka" />
+                        <img src="assets/star.png" width="16" height="16" alt="gwiazdka" />
+                        <img src="assets/star.png" width="16" height="16" alt="gwiazdka" />
                       </div>
+                    </div>
                   </div>
                   <p>
-                    ODNOWA Studio treningu personalnego to wspaniałe miejsce dla osób pragnących zwiększyć swoją aktywność fizyczną, zgubić zbędne kilogramy, poprawić swoją kondycję oraz siłę mięśni, a w efekcie zmienić swoje życie na lepsze. Obaj trenerzy wykazują się dużą wiedzą oraz profesjonalizmem, doskonale nadzorują technikę wykonywanych ćwiczeń, a dodatkowo motywują do wykorzystania maksimum swoich możliwości. Panuje tam bardzo przyjemna atmosfera, trenerzy z łatwością nawiązują kontakt z klientem. Dodatkowym atutem miejsca są porady żywieniowe, których udzielają trenerzy. Serdecznie polecam!!! 😊
+                    ODNOWA Studio treningu personalnego to wspaniałe miejsce dla osób pragnących zwiększyć swoją
+                    aktywność fizyczną, zgubić zbędne kilogramy, poprawić swoją kondycję oraz siłę mięśni, a w efekcie
+                    zmienić swoje życie na lepsze. Obaj trenerzy wykazują się dużą wiedzą oraz profesjonalizmem,
+                    doskonale nadzorują technikę wykonywanych ćwiczeń, a dodatkowo motywują do wykorzystania maksimum
+                    swoich możliwości. Panuje tam bardzo przyjemna atmosfera, trenerzy z łatwością nawiązują kontakt z
+                    klientem. Dodatkowym atutem miejsca są porady żywieniowe, których udzielają trenerzy. Serdecznie
+                    polecam!!! 😊
                   </p>
                 </div>
               </a>
@@ -370,21 +394,27 @@
               <a href="https://g.co/kgs/dCLiAk" target="_blank" rel="noopener">
                 <div class="w-96 bg-neutral-900 p-8 rounded-lg">
                   <div class="flex">
-                    <img class="mr-4 mb-4" width="40" height="40" src="https://lh3.googleusercontent.com/a/AEdFTp77dvV_lS6-801OyuxQUePCDIPe9IA8VbNpYIMS=s40-c-c0x00000000-cc-rp-mo-br100" alt="avatar użytkownika"/>
-                      <div>
-                        <p class="font-bold">Kasia Kaczmarek</p>
-                        <div class="flex">
-                          <img src="assets/star.png" width="16" height="16" alt="gwiazdka"/>
-                          <img src="assets/star.png" width="16" height="16" alt="gwiazdka"/>
-                          <img src="assets/star.png" width="16" height="16" alt="gwiazdka"/>
-                          <img src="assets/star.png" width="16" height="16" alt="gwiazdka"/>
-                          <img src="assets/star.png" width="16" height="16" alt="gwiazdka"/>
-                        </div>
+                    <img class="mr-4 mb-4" width="40" height="40"
+                      src="https://lh3.googleusercontent.com/a/AEdFTp77dvV_lS6-801OyuxQUePCDIPe9IA8VbNpYIMS=s40-c-c0x00000000-cc-rp-mo-br100"
+                      alt="avatar użytkownika" />
+                    <div>
+                      <p class="font-bold">Kasia Kaczmarek</p>
+                      <div class="flex">
+                        <img src="assets/star.png" width="16" height="16" alt="gwiazdka" />
+                        <img src="assets/star.png" width="16" height="16" alt="gwiazdka" />
+                        <img src="assets/star.png" width="16" height="16" alt="gwiazdka" />
+                        <img src="assets/star.png" width="16" height="16" alt="gwiazdka" />
+                        <img src="assets/star.png" width="16" height="16" alt="gwiazdka" />
                       </div>
+                    </div>
                   </div>
                   <p>
-                    Moja współpraca ze studiem ODNOWA zaczęła się od chęci zmiany. Podstawowym celem treningowym była potrzeba zwiększenia swobody ruchów, poprawienie nawyków żywieniowych i zgubienia zbędnych kilogramów. Już po kilku tygodniach widzę ogromną zmianę na plus w samopoczuciu i na minus w centymetrach 😊😊😊
-                    Bardzo podoba mi się możliwość trenowania zarówno z Patrykiem jak i Mikołajem bo nie wkrada się monotonia.
+                    Moja współpraca ze studiem ODNOWA zaczęła się od chęci zmiany. Podstawowym celem treningowym była
+                    potrzeba zwiększenia swobody ruchów, poprawienie nawyków żywieniowych i zgubienia zbędnych
+                    kilogramów. Już po kilku tygodniach widzę ogromną zmianę na plus w samopoczuciu i na minus w
+                    centymetrach 😊😊😊
+                    Bardzo podoba mi się możliwość trenowania zarówno z Patrykiem jak i Mikołajem bo nie wkrada się
+                    monotonia.
                     Obaj Panowie są sympatyczni i charakteryzuje ich profesjonalizm, wiedza, motywacja i zaangażowanie.
                     Z czystym sumieniem polecam!
                   </p>
@@ -396,20 +426,24 @@
               <a href="https://g.co/kgs/P36dgL" target="_blank" rel="noopener">
                 <div class="w-96 bg-neutral-900 p-8 rounded-lg">
                   <div class="flex">
-                    <img class="mr-4 mb-4" width="40" height="40" src="https://lh3.googleusercontent.com/a/AEdFTp5en2JEH8Qm9tE6whli8CmUEF0fiUbYJBlx8Ga9=s40-c-c0x00000000-cc-rp-mo-br100" alt="avatar użytkownika"/>
-                      <div>
-                        <p class="font-bold">Kazik Monka</p>
-                        <div class="flex">
-                          <img src="assets/star.png" width="16" height="16" alt="gwiazdka"/>
-                          <img src="assets/star.png" width="16" height="16" alt="gwiazdka"/>
-                          <img src="assets/star.png" width="16" height="16" alt="gwiazdka"/>
-                          <img src="assets/star.png" width="16" height="16" alt="gwiazdka"/>
-                          <img src="assets/star.png" width="16" height="16" alt="gwiazdka"/>
-                        </div>
+                    <img class="mr-4 mb-4" width="40" height="40"
+                      src="https://lh3.googleusercontent.com/a/AEdFTp5en2JEH8Qm9tE6whli8CmUEF0fiUbYJBlx8Ga9=s40-c-c0x00000000-cc-rp-mo-br100"
+                      alt="avatar użytkownika" />
+                    <div>
+                      <p class="font-bold">Kazik Monka</p>
+                      <div class="flex">
+                        <img src="assets/star.png" width="16" height="16" alt="gwiazdka" />
+                        <img src="assets/star.png" width="16" height="16" alt="gwiazdka" />
+                        <img src="assets/star.png" width="16" height="16" alt="gwiazdka" />
+                        <img src="assets/star.png" width="16" height="16" alt="gwiazdka" />
+                        <img src="assets/star.png" width="16" height="16" alt="gwiazdka" />
                       </div>
+                    </div>
                   </div>
                   <p>
-                    Siłownia w bardzo dobrym standardzie. Wnętrze i sprzęt na wysokim poziomie. Trener z dużą wiedzą zarówno na temat treningów, jak i żywienia, podpowiada jak skomponować dietę, żeby zwiększyć efektywność treningów. Polecam jak najbardziej! :)
+                    Siłownia w bardzo dobrym standardzie. Wnętrze i sprzęt na wysokim poziomie. Trener z dużą wiedzą
+                    zarówno na temat treningów, jak i żywienia, podpowiada jak skomponować dietę, żeby zwiększyć
+                    efektywność treningów. Polecam jak najbardziej! :)
                   </p>
                 </div>
               </a>
@@ -419,20 +453,23 @@
               <a href="https://g.co/kgs/PbMKCE" target="_blank" rel="noopener">
                 <div class="w-96 bg-neutral-900 p-8 rounded-lg">
                   <div class="flex">
-                    <img class="mr-4 mb-4" width="40" height="40" src="https://lh3.googleusercontent.com/a-/AD5-WCni1iL7HhHtGZq05tfA4gtv5FgQFFMB8KzYv3-D=s40-c-c0x00000000-cc-rp-mo-br100" alt="avatar użytkownika"/>
-                      <div>
-                        <p class="font-bold">Tomasz Popiołek</p>
-                        <div class="flex">
-                          <img src="assets/star.png" width="16" height="16" alt="gwiazdka"/>
-                          <img src="assets/star.png" width="16" height="16" alt="gwiazdka"/>
-                          <img src="assets/star.png" width="16" height="16" alt="gwiazdka"/>
-                          <img src="assets/star.png" width="16" height="16" alt="gwiazdka"/>
-                          <img src="assets/star.png" width="16" height="16" alt="gwiazdka"/>
-                        </div>
+                    <img class="mr-4 mb-4" width="40" height="40"
+                      src="https://lh3.googleusercontent.com/a-/AD5-WCni1iL7HhHtGZq05tfA4gtv5FgQFFMB8KzYv3-D=s40-c-c0x00000000-cc-rp-mo-br100"
+                      alt="avatar użytkownika" />
+                    <div>
+                      <p class="font-bold">Tomasz Popiołek</p>
+                      <div class="flex">
+                        <img src="assets/star.png" width="16" height="16" alt="gwiazdka" />
+                        <img src="assets/star.png" width="16" height="16" alt="gwiazdka" />
+                        <img src="assets/star.png" width="16" height="16" alt="gwiazdka" />
+                        <img src="assets/star.png" width="16" height="16" alt="gwiazdka" />
+                        <img src="assets/star.png" width="16" height="16" alt="gwiazdka" />
                       </div>
+                    </div>
                   </div>
                   <p>
-                    Pełen profesjonalizm, zaangażowanie w każdy detal treningów. Aktualnie w świeżym super miejscu, wszystko czego do życia osób które chcą odmienić swoje życie znajdziecie tutaj !!! Polecam
+                    Pełen profesjonalizm, zaangażowanie w każdy detal treningów. Aktualnie w świeżym super miejscu,
+                    wszystko czego do życia osób które chcą odmienić swoje życie znajdziecie tutaj !!! Polecam
                   </p>
                 </div>
               </a>
@@ -452,7 +489,8 @@
 
       <div class="mx-auto">
         <div class="flex items-center">
-          <div class="bg-secondary h-16 w-16 rounded-full flex justify-center items-center text-black font-bold text-4xl mr-4">
+          <div
+            class="bg-secondary h-16 w-16 rounded-full flex justify-center items-center text-black font-bold text-4xl mr-4">
             1
           </div>
           <p class="text-2xl font-bold">
@@ -468,9 +506,10 @@
           <div class="h-2 w-2 bg-white rounded-full ml-7 my-2" data-aos="zoom-in" data-aos-delay="200"></div>
           <div class="h-2 w-2 bg-white rounded-full ml-7 my-2" data-aos="zoom-in" data-aos-delay="300"></div>
         </div>
-  
+
         <div class="flex items-center">
-          <div class="bg-secondary h-16 w-16 rounded-full flex justify-center items-center text-black font-bold text-4xl mr-4">
+          <div
+            class="bg-secondary h-16 w-16 rounded-full flex justify-center items-center text-black font-bold text-4xl mr-4">
             2
           </div>
           <p class="text-2xl font-bold">
@@ -483,9 +522,10 @@
           <div class="h-2 w-2 bg-white rounded-full ml-7 my-2" data-aos="zoom-in" data-aos-delay="500"></div>
           <div class="h-2 w-2 bg-white rounded-full ml-7 my-2" data-aos="zoom-in" data-aos-delay="600"></div>
         </div>
-  
+
         <div class="flex items-center">
-          <div class="bg-secondary h-16 w-16 rounded-full flex justify-center items-center text-black font-bold text-4xl mr-4">
+          <div
+            class="bg-secondary h-16 w-16 rounded-full flex justify-center items-center text-black font-bold text-4xl mr-4">
             3
           </div>
           <p class="text-2xl font-bold">
@@ -506,10 +546,12 @@
           Studio treningu personalnego
         </p>
         <p class="mt-4 text-md text-gray-300">
-          ODNOWA Studio treningu personalnego nie jest otwartą siłownią czy centrum fitness. Jest to kameralne miejsce gdzie w zaciszu, bez niepotrzebnego tłumu spełnisz swoje realizacje treningowe. Jest to gwarancja dobrego samopoczucia jeżeli cenisz sobie prywatność.
+          ODNOWA Studio treningu personalnego nie jest otwartą siłownią czy centrum fitness. Jest to kameralne miejsce
+          gdzie w zaciszu, bez niepotrzebnego tłumu spełnisz swoje realizacje treningowe. Jest to gwarancja dobrego
+          samopoczucia jeżeli cenisz sobie prywatność.
         </p>
       </div>
-  
+
       <div class="flex-1 mr-6 mt-12">
         <p class="text-xl font-bold">
           Media społecznościowe
@@ -517,20 +559,21 @@
         <div class="h-1 w-12 bg-secondary my-2"></div>
         <div class="flex">
           <a href="https://www.facebook.com/odnowakalisz" target="_blank" rel="noopener" class="mr-2">
-            <img src="./assets/facebook.svg" alt="facebook logo" width="48px" height="48px"/>
+            <img src="./assets/facebook.svg" alt="facebook logo" width="48px" height="48px" />
           </a>
           <a href="https://www.instagram.com/odnowastudio/" target="_blank" rel="noopener">
-            <img src="./assets/instagram.svg" alt="instgram logo" width="48px" height="48px"/>
+            <img src="./assets/instagram.svg" alt="instgram logo" width="48px" height="48px" />
           </a>
         </div>
       </div>
-  
+
       <div class="flex-1 mt-12">
         <p class="text-xl font-bold">
           Kontakt
         </p>
         <div class="h-1 w-12 bg-secondary my-2"></div>
-        <a href="https://www.google.com/maps/dir//Staszica+43,+62-800+Kalisz/@51.752542,18.0777471,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x471ac594a7e866bd:0xb5a57977107fda67!2m2!1d18.0799358!2d51.7525387" class="block py-4 font-bold" target="_blank" rel="noopener">
+        <a href="https://www.google.com/maps/dir//Staszica+43,+62-800+Kalisz/@51.752542,18.0777471,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x471ac594a7e866bd:0xb5a57977107fda67!2m2!1d18.0799358!2d51.7525387"
+          class="block py-4 font-bold" target="_blank" rel="noopener">
           Staszica 43, 62-800 Kalisz
         </a>
         <a href="tel:+48782556543" class="block pb-4 font-bold">
@@ -545,9 +588,10 @@
       </div>
     </div>
   </footer>
-  
+
   <div class="max-w-screen-xl mx-auto my-4 px-6 font-bold">
-    Prawa autorskie <span id="year"></span> © ODNOWA <span class="text-secondary">Studio Treningu Personalnego</span>. Wszelkie prawa zastrzeżone.
+    Prawa autorskie <span id="year"></span> © ODNOWA <span class="text-secondary">Studio Treningu Personalnego</span>.
+    Wszelkie prawa zastrzeżone.
   </div>
 
   <div id="fb-root"></div>
@@ -556,6 +600,7 @@
   <script src="./scripts/menu.js"></script>
   <script src="./scripts/slider.js"></script>
   <script src="./scripts/cookies.js"></script>
+  <script src="./scripts/form.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
@@ -564,16 +609,16 @@
     chatbox.setAttribute("page_id", "102488931719058");
     chatbox.setAttribute("attribution", "biz_inbox");
   </script>
-  
+
   <script>
-    window.fbAsyncInit = function() {
+    window.fbAsyncInit = function () {
       FB.init({
-        xfbml            : true,
-        version          : 'v15.0'
+        xfbml: true,
+        version: 'v15.0'
       });
     };
-  
-    (function(d, s, id) {
+
+    (function (d, s, id) {
       var js, fjs = d.getElementsByTagName(s)[0];
       if (d.getElementById(id)) return;
       js = d.createElement(s); js.id = id;
@@ -583,44 +628,44 @@
   </script>
 
   <script>
-    document.addEventListener( 'DOMContentLoaded', function() {
-    var splide = new Splide( '#studio_gallery', {
-      type: 'loop',
-      perPage: 3,
-      perMove: 1,
-      autoplay: true,
-      gap: '2rem',
-      breakpoints: {
-        1024: {
-          perPage: 2,
+    document.addEventListener('DOMContentLoaded', function () {
+      var splide = new Splide('#studio_gallery', {
+        type: 'loop',
+        perPage: 3,
+        perMove: 1,
+        autoplay: true,
+        gap: '2rem',
+        breakpoints: {
+          1024: {
+            perPage: 2,
+          },
+          768: {
+            perPage: 1
+          }
         },
-        768: {
-          perPage: 1
+        classes: {
+          pagination: 'hidden'
         }
-      },
-      classes: {
-        pagination: 'hidden'
-      }
-    });
+      });
       splide.mount();
     });
-    </script>
+  </script>
 
   <script>
-    document.addEventListener("DOMContentLoaded", function() {
+    document.addEventListener("DOMContentLoaded", function () {
       var splide2 = new Splide('#opinions', {
         type: "loop",
         autoplay: true,
         arrows: false,
         pagination: false
       });
-      var bar = splide2.root.querySelector( '.splide__progress__slide' );
+      var bar = splide2.root.querySelector('.splide__progress__slide');
 
-      splide2.on( 'mounted move', function () {
-        var end  = splide2.Components.Controller.getEnd() + 1;
-        var rate = Math.min( ( splide2.index + 1 ) / end, 1 );
-        bar.style.width = String( 100 * rate ) + '%';
-      } );
+      splide2.on('mounted move', function () {
+        var end = splide2.Components.Controller.getEnd() + 1;
+        var rate = Math.min((splide2.index + 1) / end, 1);
+        bar.style.width = String(100 * rate) + '%';
+      });
       splide2.mount();
     })
   </script>
@@ -639,4 +684,5 @@
     AOS.init()
   </script>
 </body>
+
 </html>
