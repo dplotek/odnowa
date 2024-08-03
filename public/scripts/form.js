@@ -1,11 +1,11 @@
-const scriptURL = 'https://script.google.com/macros/s/AKfycbyFaeOzAhju-p1qs2Ny2MAGZNkfg9wqoDkaIpHbURyfhkV6nmE0VNmmgIa_exQ05RSs/exec'
+const scriptURL = 'https://hooks.zapier.com/hooks/catch/19675431/2u7iidd/'
 const form = document.forms['contact-form']
 const infobox = document.getElementById("infobox")
 
 form.addEventListener('submit', e => {
   e.preventDefault()
   const formData = new FormData(form)
-  formData.append("Data", new Date().toLocaleString())
+  formData.append("date", new Date().toLocaleString())
 
   e.preventDefault()
   fetch(scriptURL, {
