@@ -1,6 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+  <script data-cookieconsent="ignore">
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag("consent", "default", {
+      ad_personalization: "denied",
+      ad_storage: "denied",
+      ad_user_data: "denied",
+      analytics_storage: "denied",
+      functionality_storage: "denied",
+      personalization_storage: "denied",
+      security_storage: "granted",
+      wait_for_update: 500,
+    });
+    gtag("set", "ads_data_redaction", true);
+    gtag("set", "url_passthrough", false);
+  </script>
+  <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="19b8820d-de9f-46b5-9951-270fc46cc6c5"
+    data-blockingmode="auto" type="text/javascript"></script>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +27,7 @@
   <link href="./output.css" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide-core.min.css" rel="stylesheet">
-  <meta name="description" content="Doświadczony zespół specjalistów, który pomoże Ci osiągnąć swoje cele."/>
+  <meta name="description" content="Doświadczony zespół specjalistów, który pomoże Ci osiągnąć swoje cele." />
   <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
@@ -16,6 +35,25 @@
   <link rel="mask-icon" href="assets/favicon/safari-pinned-tab.svg" color="#5bbad5">
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="theme-color" content="#ffffff">
+  <!-- Meta Pixel Code -->
+  <script>
+    !function (f, b, e, v, n, t, s) {
+      if (f.fbq) return; n = f.fbq = function () {
+        n.callMethod ?
+          n.callMethod.apply(n, arguments) : n.queue.push(arguments);
+      };
+      if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+      n.queue = []; t = b.createElement(e); t.async = !0;
+      t.src = v; s = b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t, s);
+    }(window, document, 'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1045598730624331');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=1045598730624331&ev=PageView&noscript=1" /></noscript>
+  <!-- End Meta Pixel Code -->
 </head>
 
 <style>
@@ -25,8 +63,9 @@
     margin-top: 16px;
   }
 </style>
+
 <body>
-  
+
   <nav class="w-full sticky top-0 left-0 bg-black drop-shadow-[0_1px_1px_rgba(255,255,255,0.2)] z-10">
     <div class="max-w-screen-xl mx-auto flex justify-between items-center px-6">
       <p class="font-oswald text-4xl py-2">
@@ -62,30 +101,15 @@
           </a>
         </li>
       </ul>
-      
-      <button 
-        class="md:hidden w-6 h-6 flex items-center justify-center relative"
-        id="nav-toggler"
-        aria-label="menu"
-      >
-        <span 
-          class="transform transition w-full h-px bg-white -translate-y-2 absolute"
-          id="hamburger1"
-        ></span>
-        <span 
-          class="transform transition w-full h-px bg-white absolute"
-          id="hamburger2"
-        ></span>
-        <span 
-          class="transform transition w-full h-px bg-white translate-y-2 absolute"
-          id="hamburger3"
-        ></span>
+
+      <button class="md:hidden w-6 h-6 flex items-center justify-center relative" id="nav-toggler" aria-label="menu">
+        <span class="transform transition w-full h-px bg-white -translate-y-2 absolute" id="hamburger1"></span>
+        <span class="transform transition w-full h-px bg-white absolute" id="hamburger2"></span>
+        <span class="transform transition w-full h-px bg-white translate-y-2 absolute" id="hamburger3"></span>
       </button>
 
-      <div 
-        class="transform transition -translate-x-full md:hidden absolute left-0 top-0 -z-10 w-full min-h-screen flex" 
-        id="mobile-menu"
-      >
+      <div class="transform transition -translate-x-full md:hidden absolute left-0 top-0 -z-10 w-full min-h-screen flex"
+        id="mobile-menu">
         <ul class="text-lg font-bold bg-black pl-6 h-screen w-2/3 pt-16">
           <li class="mr-4">
             <a href="/">
@@ -114,10 +138,7 @@
           </li>
         </ul>
 
-        <div 
-          class="bg-black w-1/3 opacity-60"
-          id="menu-backdrop"
-        ></div>
+        <div class="bg-black w-1/3 opacity-60" id="menu-backdrop"></div>
       </div>
     </div>
   </nav>
@@ -130,15 +151,20 @@
 
       <div class="flex items-center justify-center flex-col md:flex-row">
         <div class="md:w-1/2 flex items-center justify-center">
-          <img src="assets/patryk.webp" alt="Trener Patryk" data-aos="fade-up" data-aos-offset="300" width="264" height="448" data-aos="flip-left" data-aos-offset="200"/>
+          <img src="assets/patryk.webp" alt="Trener Patryk" data-aos="fade-up" data-aos-offset="300" width="264"
+            height="448" data-aos="flip-left" data-aos-offset="200" />
         </div>
-    
+
         <div class="md:w-1/2">
           <h2 class="text-3xl font-bold font-oswald mb-4">
             PATRYK NOWAK
           </h2>
           <p class="text-lg">
-            Właściciel ODNOWA Studio treningu personalnego. Certyfikowany trener personalny z międzynarodową akredytacją REPs oraz AFAA. Dietetyk z wykształceniem kierunkowym wyższym. Uczestnik licznych szkoleń z zakresu treningu siłowego, programowania treningowego, treningu motorycznego, treningu medycznego oraz dietetyki, w tym sportowej. Od najmłodszych lat związany ze sportem. Pasjonat równowagi życiowej pomiędzy zdrowym trybem życia, a “codziennością”.
+            Właściciel ODNOWA Studio treningu personalnego. Certyfikowany trener personalny z międzynarodową akredytacją
+            REPs oraz AFAA. Dietetyk z wykształceniem kierunkowym wyższym. Uczestnik licznych szkoleń z zakresu treningu
+            siłowego, programowania treningowego, treningu motorycznego, treningu medycznego oraz dietetyki, w tym
+            sportowej. Od najmłodszych lat związany ze sportem. Pasjonat równowagi życiowej pomiędzy zdrowym trybem
+            życia, a “codziennością”.
           </p>
         </div>
       </div>
@@ -153,22 +179,34 @@
           <div class="splide__slider">
             <div class="splide__track">
               <ul class="splide__list" id="gallery">
-                <img src="assets/img/certificates/patryk-certyfikat1.jpg" class="splide__slide cursor-pointer" alt="Studio wewnątrz" width="768" height="543"/>
-                <img src="assets/img/certificates/patryk-certyfikat2.jpg" class="splide__slide cursor-pointer" alt="Druga część studia" width="768" height="543"/>
-                <img src="assets/img/certificates/patryk-certyfikat3.jpg" class="splide__slide cursor-pointer" alt="Sprzęt do ćwiczeń" width="768" height="543"/>
-                <img src="assets/img/certificates/patryk-certyfikat4.jpg" class="splide__slide cursor-pointer" alt="Sprzęt do ćwiczeń" width="768" height="543"/>
-                <img src="assets/img/certificates/patryk-certyfikat5.jpg" class="splide__slide cursor-pointer" alt="Sprzęt do ćwiczeń" width="768" height="543"/>
-                <img src="assets/img/certificates/patryk-certyfikat6.jpg" class="splide__slide cursor-pointer" alt="Sprzęt do ćwiczeń" width="768" height="543"/>
-                <img src="assets/img/certificates/patryk-certyfikat7.jpg" class="splide__slide cursor-pointer" alt="Sprzęt do ćwiczeń" width="768" height="543"/>
-                <img src="assets/img/certificates/patryk-certyfikat8.jpg" class="splide__slide cursor-pointer" alt="Sprzęt do ćwiczeń" width="768" height="543"/>
-                <img src="assets/img/certificates/patryk-certyfikat9.jpg" class="splide__slide cursor-pointer" alt="Sprzęt do ćwiczeń" width="768" height="543"/>
-                <img src="assets/img/certificates/patryk-certyfikat10.jpg" class="splide__slide cursor-pointer" alt="Sprzęt do ćwiczeń" width="768" height="543"/>
-                <img src="assets/img/certificates/patryk-certyfikat11.jpg" class="splide__slide cursor-pointer" alt="Sprzęt do ćwiczeń" width="768" height="543"/>
-                <img src="assets/img/certificates/patryk-certyfikat12.jpg" class="splide__slide cursor-pointer" alt="Sprzęt do ćwiczeń" width="768" height="543"/>
+                <img src="assets/img/certificates/patryk-certyfikat1.jpg" class="splide__slide cursor-pointer"
+                  alt="Studio wewnątrz" width="768" height="543" />
+                <img src="assets/img/certificates/patryk-certyfikat2.jpg" class="splide__slide cursor-pointer"
+                  alt="Druga część studia" width="768" height="543" />
+                <img src="assets/img/certificates/patryk-certyfikat3.jpg" class="splide__slide cursor-pointer"
+                  alt="Sprzęt do ćwiczeń" width="768" height="543" />
+                <img src="assets/img/certificates/patryk-certyfikat4.jpg" class="splide__slide cursor-pointer"
+                  alt="Sprzęt do ćwiczeń" width="768" height="543" />
+                <img src="assets/img/certificates/patryk-certyfikat5.jpg" class="splide__slide cursor-pointer"
+                  alt="Sprzęt do ćwiczeń" width="768" height="543" />
+                <img src="assets/img/certificates/patryk-certyfikat6.jpg" class="splide__slide cursor-pointer"
+                  alt="Sprzęt do ćwiczeń" width="768" height="543" />
+                <img src="assets/img/certificates/patryk-certyfikat7.jpg" class="splide__slide cursor-pointer"
+                  alt="Sprzęt do ćwiczeń" width="768" height="543" />
+                <img src="assets/img/certificates/patryk-certyfikat8.jpg" class="splide__slide cursor-pointer"
+                  alt="Sprzęt do ćwiczeń" width="768" height="543" />
+                <img src="assets/img/certificates/patryk-certyfikat9.jpg" class="splide__slide cursor-pointer"
+                  alt="Sprzęt do ćwiczeń" width="768" height="543" />
+                <img src="assets/img/certificates/patryk-certyfikat10.jpg" class="splide__slide cursor-pointer"
+                  alt="Sprzęt do ćwiczeń" width="768" height="543" />
+                <img src="assets/img/certificates/patryk-certyfikat11.jpg" class="splide__slide cursor-pointer"
+                  alt="Sprzęt do ćwiczeń" width="768" height="543" />
+                <img src="assets/img/certificates/patryk-certyfikat12.jpg" class="splide__slide cursor-pointer"
+                  alt="Sprzęt do ćwiczeń" width="768" height="543" />
               </ul>
             </div>
           </div>
-        
+
           <div class="splide__progress">
             <div class="splide__progress__bar">
             </div>
@@ -177,20 +215,24 @@
       </div>
     </div>
 
-      <div class="flex items-center justify-center flex-col md:flex-row max-w-screen-xl mx-auto px-6 py-24">
-        <div class="md:w-1/2">
-          <h3 class="text-3xl font-bold font-oswald mb-4">
-            MATEUSZ KŁODAWSKI
-          </h3>
-          <p class="text-lg">
-            Certyfikowany, międzynarodowy trener personalny, który zdobył powyższy tytuł w Akademii Mistrzostwa Sportowego we Wrocławiu. Swoją wiedzę w zakresie treningu pogłębił też licznymi szkoleniami, a także literaturą. Zamiłowanie do sportu ma już od najmłodszych lat, a teraz postanowił zarazić nim innych. Uczy poprawnej techniki wykonywanych ćwiczeń, koryguje wady postawy, a także podpowiada w kwestiach żywieniowych
-          </p>
-        </div>
-
-        <div class="md:w-1/2 flex items-center justify-center">
-          <img src="assets/mateusz.webp" alt="Trener Mateusz" data-aos="fade-up" data-aos-offset="300" width="264" height="448" data-aos="flip-left" data-aos-offset="200"/>
-        </div>
+    <div class="flex items-center justify-center flex-col md:flex-row max-w-screen-xl mx-auto px-6 py-24">
+      <div class="md:w-1/2">
+        <h3 class="text-3xl font-bold font-oswald mb-4">
+          MATEUSZ KŁODAWSKI
+        </h3>
+        <p class="text-lg">
+          Certyfikowany, międzynarodowy trener personalny, który zdobył powyższy tytuł w Akademii Mistrzostwa Sportowego
+          we Wrocławiu. Swoją wiedzę w zakresie treningu pogłębił też licznymi szkoleniami, a także literaturą.
+          Zamiłowanie do sportu ma już od najmłodszych lat, a teraz postanowił zarazić nim innych. Uczy poprawnej
+          techniki wykonywanych ćwiczeń, koryguje wady postawy, a także podpowiada w kwestiach żywieniowych
+        </p>
       </div>
+
+      <div class="md:w-1/2 flex items-center justify-center">
+        <img src="assets/mateusz.webp" alt="Trener Mateusz" data-aos="fade-up" data-aos-offset="300" width="264"
+          height="448" data-aos="flip-left" data-aos-offset="200" />
+      </div>
+    </div>
     </div>
 
     <!-- <div class="bg-neutral-900">
@@ -231,10 +273,12 @@
           Studio treningu personalnego
         </p>
         <p class="mt-4 text-md text-gray-300">
-          ODNOWA Studio treningu personalnego nie jest otwartą siłownią czy centrum fitness. Jest to kameralne miejsce gdzie w zaciszu, bez niepotrzebnego tłumu spełnisz swoje realizacje treningowe. Jest to gwarancja dobrego samopoczucia jeżeli cenisz sobie prywatność.
+          ODNOWA Studio treningu personalnego nie jest otwartą siłownią czy centrum fitness. Jest to kameralne miejsce
+          gdzie w zaciszu, bez niepotrzebnego tłumu spełnisz swoje realizacje treningowe. Jest to gwarancja dobrego
+          samopoczucia jeżeli cenisz sobie prywatność.
         </p>
       </div>
-  
+
       <div class="flex-1 mr-6 mt-12">
         <p class="text-xl font-bold">
           Media społecznościowe
@@ -242,20 +286,21 @@
         <div class="h-1 w-12 bg-secondary my-2"></div>
         <div class="flex">
           <a href="https://www.facebook.com/odnowakalisz" target="_blank" rel="noopener" class="mr-2">
-            <img src="./assets/facebook.svg" alt="facebook logo" width="48px" height="48px"/>
+            <img src="./assets/facebook.svg" alt="facebook logo" width="48px" height="48px" />
           </a>
           <a href="https://www.instagram.com/odnowastudio/" target="_blank" rel="noopener">
-            <img src="./assets/instagram.svg" alt="instgram logo" width="48px" height="48px"/>
+            <img src="./assets/instagram.svg" alt="instgram logo" width="48px" height="48px" />
           </a>
         </div>
       </div>
-  
+
       <div class="flex-1 mt-12">
         <p class="text-xl font-bold">
           Kontakt
         </p>
         <div class="h-1 w-12 bg-secondary my-2"></div>
-        <a href="https://www.google.com/maps/dir//Staszica+43,+62-800+Kalisz/@51.752542,18.0777471,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x471ac594a7e866bd:0xb5a57977107fda67!2m2!1d18.0799358!2d51.7525387" class="block py-4 font-bold" target="_blank" rel="noopener">
+        <a href="https://www.google.com/maps/dir//Staszica+43,+62-800+Kalisz/@51.752542,18.0777471,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x471ac594a7e866bd:0xb5a57977107fda67!2m2!1d18.0799358!2d51.7525387"
+          class="block py-4 font-bold" target="_blank" rel="noopener">
           Staszica 43, 62-800 Kalisz
         </a>
         <a href="tel:+48782556543" class="block pb-4 font-bold">
@@ -272,7 +317,8 @@
   </footer>
 
   <div class="max-w-screen-xl mx-auto my-4 px-6 font-bold">
-    Prawa autorskie <span id="year"></span> © ODNOWA <span class="text-secondary">Studio Treningu Personalnego</span>. Wszelkie prawa zastrzeżone.
+    Prawa autorskie <span id="year"></span> © ODNOWA <span class="text-secondary">Studio Treningu Personalnego</span>.
+    Wszelkie prawa zastrzeżone.
   </div>
 
   <div id="fb-root"></div>
@@ -290,16 +336,16 @@
     chatbox.setAttribute("page_id", "102488931719058");
     chatbox.setAttribute("attribution", "biz_inbox");
   </script>
-  
+
   <script>
-    window.fbAsyncInit = function() {
+    window.fbAsyncInit = function () {
       FB.init({
-        xfbml            : true,
-        version          : 'v15.0'
+        xfbml: true,
+        version: 'v15.0'
       });
     };
-  
-    (function(d, s, id) {
+
+    (function (d, s, id) {
       var js, fjs = d.getElementsByTagName(s)[0];
       if (d.getElementById(id)) return;
       js = d.createElement(s); js.id = id;
@@ -308,36 +354,37 @@
     }(document, 'script', 'facebook-jssdk'));
   </script>
 
-<script>
-  document.addEventListener( 'DOMContentLoaded', function() {
-  var elms = document.getElementsByClassName( 'splide' );
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var elms = document.getElementsByClassName('splide');
 
-  for(var i = 0; i < elms.length; i++) {
-    new Splide(elms[i], {
-      type: 'loop',
-      perPage: 3,
-      perMove: 3,
-      autoplay: true,
-      arrows: false,
-      gap: '2rem',
-      breakpoints: {
-        1024: {
-          perPage: 2,
-        },
-        768: {
-          perPage: 1
-        }
-      },
-      classes: {
-        pagination: 'hidden'
+      for (var i = 0; i < elms.length; i++) {
+        new Splide(elms[i], {
+          type: 'loop',
+          perPage: 3,
+          perMove: 3,
+          autoplay: true,
+          arrows: false,
+          gap: '2rem',
+          breakpoints: {
+            1024: {
+              perPage: 2,
+            },
+            768: {
+              perPage: 1
+            }
+          },
+          classes: {
+            pagination: 'hidden'
+          }
+        }).mount();
       }
-    }).mount()
-  }
-  })
+    })
   </script>
   <script>
-    const year = document.getElementById("year")
+    const year = document.getElementById("year");
     year.textContent = new Date().getFullYear()
   </script>
 </body>
+
 </html>

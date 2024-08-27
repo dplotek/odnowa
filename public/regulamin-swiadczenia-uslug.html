@@ -1,6 +1,25 @@
 <!DOCTYPE html>
 <html lang="pl">
+
 <head>
+  <script data-cookieconsent="ignore">
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag("consent", "default", {
+      ad_personalization: "denied",
+      ad_storage: "denied",
+      ad_user_data: "denied",
+      analytics_storage: "denied",
+      functionality_storage: "denied",
+      personalization_storage: "denied",
+      security_storage: "granted",
+      wait_for_update: 500,
+    });
+    gtag("set", "ads_data_redaction", true);
+    gtag("set", "url_passthrough", false);
+  </script>
+  <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="19b8820d-de9f-46b5-9951-270fc46cc6c5"
+    data-blockingmode="auto" type="text/javascript"></script>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +28,8 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet">
-  <meta name="description" content="ODNOWA została stworzona z myślą by pomóc w poprawie zdrowia i realizacji celów. Wykwalifikowani trenerzy pomogą Ci w realizacji Twoich celów."/>
+  <meta name="description"
+    content="ODNOWA została stworzona z myślą by pomóc w poprawie zdrowia i realizacji celów. Wykwalifikowani trenerzy pomogą Ci w realizacji Twoich celów." />
   <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
@@ -17,7 +37,27 @@
   <link rel="mask-icon" href="assets/favicon/safari-pinned-tab.svg" color="#5bbad5">
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="theme-color" content="#ffffff">
+  <!-- Meta Pixel Code -->
+  <script>
+    !function (f, b, e, v, n, t, s) {
+      if (f.fbq) return; n = f.fbq = function () {
+        n.callMethod ?
+          n.callMethod.apply(n, arguments) : n.queue.push(arguments);
+      };
+      if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+      n.queue = []; t = b.createElement(e); t.async = !0;
+      t.src = v; s = b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t, s);
+    }(window, document, 'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1045598730624331');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=1045598730624331&ev=PageView&noscript=1" /></noscript>
+  <!-- End Meta Pixel Code -->
 </head>
+
 <body>
 
   <nav class="w-full sticky top-0 left-0 bg-black drop-shadow-[0_1px_1px_rgba(255,255,255,0.2)] z-10">
@@ -55,30 +95,15 @@
           </a>
         </li>
       </ul>
-      
-      <button 
-        class="md:hidden w-6 h-6 flex items-center justify-center relative"
-        id="nav-toggler"
-        aria-label="menu"
-      >
-        <span 
-          class="transform transition w-full h-px bg-white -translate-y-2 absolute"
-          id="hamburger1"
-        ></span>
-        <span 
-          class="transform transition w-full h-px bg-white absolute"
-          id="hamburger2"
-        ></span>
-        <span 
-          class="transform transition w-full h-px bg-white translate-y-2 absolute"
-          id="hamburger3"
-        ></span>
+
+      <button class="md:hidden w-6 h-6 flex items-center justify-center relative" id="nav-toggler" aria-label="menu">
+        <span class="transform transition w-full h-px bg-white -translate-y-2 absolute" id="hamburger1"></span>
+        <span class="transform transition w-full h-px bg-white absolute" id="hamburger2"></span>
+        <span class="transform transition w-full h-px bg-white translate-y-2 absolute" id="hamburger3"></span>
       </button>
 
-      <div 
-        class="transform transition -translate-x-full md:hidden absolute left-0 top-0 -z-10 w-full min-h-screen flex" 
-        id="mobile-menu"
-      >
+      <div class="transform transition -translate-x-full md:hidden absolute left-0 top-0 -z-10 w-full min-h-screen flex"
+        id="mobile-menu">
         <ul class="text-lg font-bold bg-black pl-6 h-screen w-2/3 pt-16">
           <li class="mr-4">
             <a href="/">
@@ -107,10 +132,7 @@
           </li>
         </ul>
 
-        <div 
-          class="bg-black w-1/3 opacity-60"
-          id="menu-backdrop"
-        ></div>
+        <div class="bg-black w-1/3 opacity-60" id="menu-backdrop"></div>
       </div>
     </div>
   </nav>
@@ -122,79 +144,169 @@
 
     <p class="font-bold mb-2">§ 1 Słownik pojęć</p>
     <p class="mb-4">
-      1. Usługodawca – Patryk Nowak, prowadzący działalność gospodarczą pod firmą ODNOWA STUDIO TRENINGU PERSONALNEGO PATRYK NOWAK, ul. Ostrowska 30a, 62 – 800 Kalisz, wpisany do Centralnej Ewidencji i Informacji o Działalności Gospodarczej, NIP 6182186797.<br/>
-      2. Uczestnik – każdy podmiot, na rzecz którego Usługodawca może świadczyć lub świadczy Usługę.<br/>
-      3. Usługa – usługa treningu personalnego świadczona przez Usługodawcę.<br/>
-      4. Umowa – umowa o świadczenie Usługi zawierana pomiędzy Usługodawcą a Uczestnikiem.<br/>
+      1. Usługodawca – Patryk Nowak, prowadzący działalność gospodarczą pod firmą ODNOWA STUDIO TRENINGU PERSONALNEGO
+      PATRYK NOWAK, ul. Ostrowska 30a, 62 – 800 Kalisz, wpisany do Centralnej Ewidencji i Informacji o Działalności
+      Gospodarczej, NIP 6182186797.<br />
+      2. Uczestnik – każdy podmiot, na rzecz którego Usługodawca może świadczyć lub świadczy Usługę.<br />
+      3. Usługa – usługa treningu personalnego świadczona przez Usługodawcę.<br />
+      4. Umowa – umowa o świadczenie Usługi zawierana pomiędzy Usługodawcą a Uczestnikiem.<br />
       5. Konsument – zgodnie z definicją w art. 221 Kodeksu cywilnego.
       6. Regulamin – niniejszy regulamin.
     </p>
     <p class="font-bold mb-2">§ 2 Postanowienia ogólne</p>
     <p class="mb-4">
-      1. Regulamin określa warunki i zasady świadczenia przez Usługodawcę Usługi na rzecz Uczestnika oraz tryb postępowania reklamacyjnego.<br/>
-      2. Uczestnik może porozumiewać się z Usługodawcą poprzez e-mail (kontakt@odnowastudio.pl), telefonicznie pod numerem 782556543 lub osobiście w siedzibie Usługodawcy.<br/>
-      3. Usługa treningu personalnego polega na przeprowadzeniu przez Usługodawcę zindywidualizowanych i zorganizowanych zajęć sportowych dostosowanych do potrzeb Uczestnika. Może również obejmować opracowanie spersonalizowanego planu treningowego, wskazanie zaleceń żywieniowych, monitorowanie postępów treningowych i przekazywaniu Uczestnikowi wiedzy w zakresie kulturystyki, fitness, anatomii i dietetyki. Szczegółowy zakres Usługi określa Umowa.<br/>
-      4. Usługa świadczona jest przez Usługodawcę w jego siedzibie. Umowa może określać także inne miejsca świadczenia Usługi.<br/>
-      5. Na terenie siedziby Usługodawcy obowiązuje całkowity zakaz spożywania alkoholu, palenia tytoniu i papierosów elektronicznych, stosowania środków dopingujących, stymulujących, narkotyków i innych zakazanych przez obowiązujące prawo, a także przebywania na terenie siedziby Usługodawcy pod wpływem tych używek i środków.<br/>
-      6. Usługodawca dochowuje wszelkich starań, aby Usługa była realizowana w sposób bezpieczny dla Uczestnika.<br/>
-      7. W okresie obowiązywania na terytorium Rzeczypospolitej Polskiej stanu epidemii Usługodawca świadczy Usługę w zgodzie z obowiązującymi w tym okresie aktami prawnymi i wytycznymi. W szczególności Usługodawca weryfikuje liczbę osób uczestniczących w zajęciach sportowych, dezynfekuje szatnie i węzły sanitarne, zapewnia osobom uczestniczącym w zajęciach środki do dezynfekcji rąk i sprzętu sportowego, dezynfekuje urządzenia i sprzęt sportowy po każdym użyciu oraz ogranicza kontakt pomiędzy Uczestnikami, odpowiednio planując godziny treningów i zezwalając na przebywanie w danym pomieszczeniu tylko jednego Uczestnika. Uczestnik jest obowiązany do dezynfekcji rąk, wchodząc i opuszczając siedzibę Usługodawcy.<br/>
-      8. W siedzibie Usługodawcy mogą przebywać wyłącznie określone osoby – Usługodawca oraz Uczestnik, na rzecz którego w danych ramach czasowych Usługodawca świadczy Usługę. Siedziba Usługodawcy nie stanowi przestrzeni publicznej ani nie jest miejscem ogólnodostępnym. Ewentualna obecność osób trzecich spotka się z natychmiastową reakcją Usługodawcy zmierzającą do niezwłocznego opuszczenia przez te osoby siedziby Usługodawcy.<br/>
-      9. Usługodawca nie wykorzystuje utworów muzycznych do wykonania Usługi. Ewentualne odtwarzanie muzyki w siedzibie Usługodawcy nie stanowi publicznego odtwarzania i rozpowszechniania utworów oraz nie jest przedmiotem Umowy. Służy wyłącznie celom prywatnym Usługodawcy. Z tego tytułu Usługodawca nie osiąga żadnych korzyści majątkowych.<br/>
-      10. Na terenie siedziby Usługodawcy znajduje się system monitoringu wizyjnego z możliwością zapisu nagrań. Rejestracji i zapisowi danych podlega tylko obraz (bez dźwięku). Nagrania mogą być podstawą do pociągnięcia do odpowiedzialności osób, które nie stosują się do obowiązującego prawa i Regulaminu. Usługodawca zapewnia, że monitoring prowadzony jest w sposób nienaruszający dóbr osobistych oraz godności osób przebywających na terenie siedziby Usługodawcy. Rejestrowany jest jedynie teren holu na wypadek wtargnięcia nieupoważnionych osób (stosowne oznaczenie znajduje się w holu). Dostęp do nagrań ma wyłącznie Usługodawca oraz wykonawca usług ochrony osób i mienia. Zapis nagrań może być udostępniony jedynie organom ścigania w razie podejrzenia popełnienia czynu zabronionego przez prawo. Zapisy nagrań są kasowane najpóźniej w ciągu 30 dni, chyba że nagrania stanowią dowód w postępowaniu prowadzonym na podstawie prawa lub mogą one stanowić dowód w takim postępowaniu. W takich przypadkach termin określony powyżej ulega przedłużeniu do czasu prawomocnego zakończenia takiego postępowania. Monitoring ma charakter wyłącznie prewencyjny i mający zapewnić bezpieczeństwo osób przebywających w siedzibie Usługodawcy i mienia tam się znajdującego. Jeżeli Uczestnik nie wyraża zgody na nagrywanie, winien niezwłocznie opuścić siedzibę Usługodawcy. W braku takiej zgody Usługa nie będzie mogła być wykonywana.<br/>
-      11. Utrwalanie wizerunku Uczestnika przez Usługodawcę podczas zajęć za pomocą urządzenia umożliwiającego nagrywanie obrazu i dźwięku, w szczególności smartfona, oraz publikowanie tak utrwalonych nagrań na stronie internetowej Usługodawcy www.odnowastudio.pl lub na profilach Usługodawcy w mediach społecznościowych – w szczególności w celu promocji Usługi Usługodawcy – możliwe jest wyłącznie po wyrażeniu przez Uczestnika stosownej zgody.<br/>
+      1. Regulamin określa warunki i zasady świadczenia przez Usługodawcę Usługi na rzecz Uczestnika oraz tryb
+      postępowania reklamacyjnego.<br />
+      2. Uczestnik może porozumiewać się z Usługodawcą poprzez e-mail (kontakt@odnowastudio.pl), telefonicznie pod
+      numerem 782556543 lub osobiście w siedzibie Usługodawcy.<br />
+      3. Usługa treningu personalnego polega na przeprowadzeniu przez Usługodawcę zindywidualizowanych i zorganizowanych
+      zajęć sportowych dostosowanych do potrzeb Uczestnika. Może również obejmować opracowanie spersonalizowanego planu
+      treningowego, wskazanie zaleceń żywieniowych, monitorowanie postępów treningowych i przekazywaniu Uczestnikowi
+      wiedzy w zakresie kulturystyki, fitness, anatomii i dietetyki. Szczegółowy zakres Usługi określa Umowa.<br />
+      4. Usługa świadczona jest przez Usługodawcę w jego siedzibie. Umowa może określać także inne miejsca świadczenia
+      Usługi.<br />
+      5. Na terenie siedziby Usługodawcy obowiązuje całkowity zakaz spożywania alkoholu, palenia tytoniu i papierosów
+      elektronicznych, stosowania środków dopingujących, stymulujących, narkotyków i innych zakazanych przez
+      obowiązujące prawo, a także przebywania na terenie siedziby Usługodawcy pod wpływem tych używek i środków.<br />
+      6. Usługodawca dochowuje wszelkich starań, aby Usługa była realizowana w sposób bezpieczny dla Uczestnika.<br />
+      7. W okresie obowiązywania na terytorium Rzeczypospolitej Polskiej stanu epidemii Usługodawca świadczy Usługę w
+      zgodzie z obowiązującymi w tym okresie aktami prawnymi i wytycznymi. W szczególności Usługodawca weryfikuje liczbę
+      osób uczestniczących w zajęciach sportowych, dezynfekuje szatnie i węzły sanitarne, zapewnia osobom uczestniczącym
+      w zajęciach środki do dezynfekcji rąk i sprzętu sportowego, dezynfekuje urządzenia i sprzęt sportowy po każdym
+      użyciu oraz ogranicza kontakt pomiędzy Uczestnikami, odpowiednio planując godziny treningów i zezwalając na
+      przebywanie w danym pomieszczeniu tylko jednego Uczestnika. Uczestnik jest obowiązany do dezynfekcji rąk, wchodząc
+      i opuszczając siedzibę Usługodawcy.<br />
+      8. W siedzibie Usługodawcy mogą przebywać wyłącznie określone osoby – Usługodawca oraz Uczestnik, na rzecz którego
+      w danych ramach czasowych Usługodawca świadczy Usługę. Siedziba Usługodawcy nie stanowi przestrzeni publicznej ani
+      nie jest miejscem ogólnodostępnym. Ewentualna obecność osób trzecich spotka się z natychmiastową reakcją
+      Usługodawcy zmierzającą do niezwłocznego opuszczenia przez te osoby siedziby Usługodawcy.<br />
+      9. Usługodawca nie wykorzystuje utworów muzycznych do wykonania Usługi. Ewentualne odtwarzanie muzyki w siedzibie
+      Usługodawcy nie stanowi publicznego odtwarzania i rozpowszechniania utworów oraz nie jest przedmiotem Umowy. Służy
+      wyłącznie celom prywatnym Usługodawcy. Z tego tytułu Usługodawca nie osiąga żadnych korzyści majątkowych.<br />
+      10. Na terenie siedziby Usługodawcy znajduje się system monitoringu wizyjnego z możliwością zapisu nagrań.
+      Rejestracji i zapisowi danych podlega tylko obraz (bez dźwięku). Nagrania mogą być podstawą do pociągnięcia do
+      odpowiedzialności osób, które nie stosują się do obowiązującego prawa i Regulaminu. Usługodawca zapewnia, że
+      monitoring prowadzony jest w sposób nienaruszający dóbr osobistych oraz godności osób przebywających na terenie
+      siedziby Usługodawcy. Rejestrowany jest jedynie teren holu na wypadek wtargnięcia nieupoważnionych osób (stosowne
+      oznaczenie znajduje się w holu). Dostęp do nagrań ma wyłącznie Usługodawca oraz wykonawca usług ochrony osób i
+      mienia. Zapis nagrań może być udostępniony jedynie organom ścigania w razie podejrzenia popełnienia czynu
+      zabronionego przez prawo. Zapisy nagrań są kasowane najpóźniej w ciągu 30 dni, chyba że nagrania stanowią dowód w
+      postępowaniu prowadzonym na podstawie prawa lub mogą one stanowić dowód w takim postępowaniu. W takich przypadkach
+      termin określony powyżej ulega przedłużeniu do czasu prawomocnego zakończenia takiego postępowania. Monitoring ma
+      charakter wyłącznie prewencyjny i mający zapewnić bezpieczeństwo osób przebywających w siedzibie Usługodawcy i
+      mienia tam się znajdującego. Jeżeli Uczestnik nie wyraża zgody na nagrywanie, winien niezwłocznie opuścić siedzibę
+      Usługodawcy. W braku takiej zgody Usługa nie będzie mogła być wykonywana.<br />
+      11. Utrwalanie wizerunku Uczestnika przez Usługodawcę podczas zajęć za pomocą urządzenia umożliwiającego
+      nagrywanie obrazu i dźwięku, w szczególności smartfona, oraz publikowanie tak utrwalonych nagrań na stronie
+      internetowej Usługodawcy www.odnowastudio.pl lub na profilach Usługodawcy w mediach społecznościowych – w
+      szczególności w celu promocji Usługi Usługodawcy – możliwe jest wyłącznie po wyrażeniu przez Uczestnika stosownej
+      zgody.<br />
     </p>
     <p class="font-bold mb-2">§ 3 Zawarcie Umowy</p>
     <p class="mb-4">
-      1. Usługodawca świadczy Usługę na podstawie zawartej z Uczestnikiem Umowy.<br/>
-      2. Umowę może zawrzeć każdy zainteresowany, zdolny do udziału w zajęciach sportowych, nie posiadający w tym zakresie żadnych przeciwwskazań zdrowotnych. Warunkiem zawarcia Umowy jest wypełnienie przez Uczestnika kwestionariusza zdrowia i podanie w nim prawdziwych informacji, na podstawie których Usługodawca może ocenić zdolność Uczestnika do udziału w zajęciach sportowych. W przypadku osoby niepełnoletniej wszelkich czynności związanych z zawarciem i wykonaniem Umowy dokonuje jej prawny opiekun.<br/>
-      3. Umowa zawierana jest na piśmie w siedzibie Usługodawcy.<br/>
-      4. Umowa określa w szczególności prawa i obowiązki stron, szczegółowy zakres świadczonej Usługi, częstotliwość przeprowadzania treningów, wysokość przysługującego Usługodawcy wynagrodzenia oraz zasady zlecania treningów.<br/>
+      1. Usługodawca świadczy Usługę na podstawie zawartej z Uczestnikiem Umowy.<br />
+      2. Umowę może zawrzeć każdy zainteresowany, zdolny do udziału w zajęciach sportowych, nie posiadający w tym
+      zakresie żadnych przeciwwskazań zdrowotnych. Warunkiem zawarcia Umowy jest wypełnienie przez Uczestnika
+      kwestionariusza zdrowia i podanie w nim prawdziwych informacji, na podstawie których Usługodawca może ocenić
+      zdolność Uczestnika do udziału w zajęciach sportowych. W przypadku osoby niepełnoletniej wszelkich czynności
+      związanych z zawarciem i wykonaniem Umowy dokonuje jej prawny opiekun.<br />
+      3. Umowa zawierana jest na piśmie w siedzibie Usługodawcy.<br />
+      4. Umowa określa w szczególności prawa i obowiązki stron, szczegółowy zakres świadczonej Usługi, częstotliwość
+      przeprowadzania treningów, wysokość przysługującego Usługodawcy wynagrodzenia oraz zasady zlecania
+      treningów.<br />
     </p>
     <p class="font-bold mb-2">§ 4 Wykonanie Umowy</p>
     <p class="mb-4">
-      1. Usługa świadczona jest odpłatnie. Wysokość wynagrodzenia przysługującego Usługodawcy określa Umowa.<br/>
-      2. Usługodawca udostępnia następujące sposoby realizacji płatności:<br/>
-        a) gotówką w siedzibie Usługodawcy,<br/>
-        b) przelewem na rachunek bankowy Usługodawcy o nr 63 1240 2946 1111 0011 0266 6819.<br/>
-      3. Uczestnik ma możliwość zlecenia Usługodawcy pojedynczych treningów personalnych lub pakietu 10 treningów personalnych. W przypadku pakietu, o którym mowa w zdaniu poprzednim, Usługodawca udzieli Uczestnikowi rabatu w wysokości określonej w Umowie.<br/>
-      4. W jednym treningu może uczestniczyć jeden Uczestnik lub dwóch/dwoje Uczestników.<br/>
-      5. Usługodawca udostępnia Uczestnikowi szatnię, toaletę i prysznic. W szatni Uczestnik może skorzystać z zamykanych na klucz szafek. Usługodawca zaleca, aby wszelkie rzeczy, w tym sprzęt elektroniczny, Uczestnik pozostawiał w zamykanych szafkach lub zabierał na salę treningową. Usługodawca nie odpowiada za rzeczy pozostawione przez Uczestnika na terenie siedziby Usługodawcy. Uczestnik deklaruje, że nie będzie żądał od Usługodawcy odszkodowania w przypadku, gdy kradzież, uszkodzenie lub zaginięcie pozostawionych na terenie siedziby Usługodawcy rzeczy nastąpi w momencie, gdy nie dochował szczególnej staranności w celu ich zabezpieczenia, tj. zabrania ich ze sobą na salę/pozostawienia w zamkniętej szafce.<br/>
-      6. Uczestnik zobowiązany jest do zachowania porządku na terenie siedziby Usługodawcy i poszanowania wyposażenia tej siedziby.<br/>
-      7. Uczestnik zobowiązany jest wykonywać ćwiczenia w stroju i obuwiu sportowym, korzystać z ręcznika kładąc go na sprzęcie treningowym oraz przestrzegać wszelkich wymaganych przez prawo zasad sanitarnych.<br/>
-      8. Uczestnik zobowiązuje się przestrzegać wszelkich zaleceń, poleceń i uwag Usługodawcy w trakcie świadczenia przez niego Usługi.<br/>
-      9. O problemach zdrowotnych, w tym kontuzjach i urazach, Uczestnik informuje Usługodawcę na bieżąco.<br/>
-      10. Szczegółowe warunki wykonywania Umowy, w tym także w zakresie ustalania godzin treningów, określa Umowa.<br/>
+      1. Usługa świadczona jest odpłatnie. Wysokość wynagrodzenia przysługującego Usługodawcy określa Umowa.<br />
+      2. Usługodawca udostępnia następujące sposoby realizacji płatności:<br />
+      a) gotówką w siedzibie Usługodawcy,<br />
+      b) przelewem na rachunek bankowy Usługodawcy o nr 63 1240 2946 1111 0011 0266 6819.<br />
+      3. Uczestnik ma możliwość zlecenia Usługodawcy pojedynczych treningów personalnych lub pakietu 10 treningów
+      personalnych. W przypadku pakietu, o którym mowa w zdaniu poprzednim, Usługodawca udzieli Uczestnikowi rabatu w
+      wysokości określonej w Umowie.<br />
+      4. W jednym treningu może uczestniczyć jeden Uczestnik lub dwóch/dwoje Uczestników.<br />
+      5. Usługodawca udostępnia Uczestnikowi szatnię, toaletę i prysznic. W szatni Uczestnik może skorzystać z
+      zamykanych na klucz szafek. Usługodawca zaleca, aby wszelkie rzeczy, w tym sprzęt elektroniczny, Uczestnik
+      pozostawiał w zamykanych szafkach lub zabierał na salę treningową. Usługodawca nie odpowiada za rzeczy
+      pozostawione przez Uczestnika na terenie siedziby Usługodawcy. Uczestnik deklaruje, że nie będzie żądał od
+      Usługodawcy odszkodowania w przypadku, gdy kradzież, uszkodzenie lub zaginięcie pozostawionych na terenie siedziby
+      Usługodawcy rzeczy nastąpi w momencie, gdy nie dochował szczególnej staranności w celu ich zabezpieczenia, tj.
+      zabrania ich ze sobą na salę/pozostawienia w zamkniętej szafce.<br />
+      6. Uczestnik zobowiązany jest do zachowania porządku na terenie siedziby Usługodawcy i poszanowania wyposażenia
+      tej siedziby.<br />
+      7. Uczestnik zobowiązany jest wykonywać ćwiczenia w stroju i obuwiu sportowym, korzystać z ręcznika kładąc go na
+      sprzęcie treningowym oraz przestrzegać wszelkich wymaganych przez prawo zasad sanitarnych.<br />
+      8. Uczestnik zobowiązuje się przestrzegać wszelkich zaleceń, poleceń i uwag Usługodawcy w trakcie świadczenia
+      przez niego Usługi.<br />
+      9. O problemach zdrowotnych, w tym kontuzjach i urazach, Uczestnik informuje Usługodawcę na bieżąco.<br />
+      10. Szczegółowe warunki wykonywania Umowy, w tym także w zakresie ustalania godzin treningów, określa Umowa.<br />
     </p>
     <p class="font-bold mb-2">§ 5 Tryb postępowania reklamacyjnego</p>
     <p class="mb-4">
-      1. Uczestnikowi w sprawach dotyczących realizacji Usługi przysługuje prawo do złożenia reklamacji.<br/>
-      2. Reklamacja może być złożona pisemnie listem na adres Usługodawcy lub za pośrednictwem maila: kontakt@odnowastudio.pl.<br/>
-      3. Składając reklamację Usługodawca zaleca podanie danych kontaktowych Uczestnika oraz dokładne opisanie przyczyn reklamacji i żądań wobec Usługodawcy.<br/>
-      4. Usługodawca rozpozna reklamację w terminie do 14 dni od dnia jej otrzymania. O wyniku postępowania reklamacyjnego Uczestnik zostanie powiadomiony listem poleconym bądź za pośrednictwem poczty e-mail.<br/>
-      5. W procedurze reklamacji Usługodawca nie przewiduje możliwości pozasądowego rozstrzygnięcia sporu.<br/>
-      6. Zgodnie z Rozporządzeniem Parlamentu Europejskiego i Rady (UE) nr 524/2013 z dnia 21 maja 2013 r. w sprawie internetowego systemu rozstrzygania sporów konsumenckich oraz zmiany rozporządzenia (WE) nr 2006/2004 i dyrektywy 2009/22/WE (rozporządzenie w sprawie ODR w sporach konsumenckich), narzędziem służącym pozasądowemu rozstrzyganiu sporów dotyczących zobowiązań umownych wynikających z internetowych umów sprzedaży lub umów o świadczenie usług zawieranych między Konsumentami mieszkającymi w Unii Europejskiej a przedsiębiorcami mającymi siedzibę w UE jest platforma ODR (Online Dispute Resolution). Jest ona dostępna pod adresem http://ec.europa.eu/consumers/odr/. Rozstrzyganie sporów tą metodą ma charakter bezpłatny i dobrowolny.<br/>
+      1. Uczestnikowi w sprawach dotyczących realizacji Usługi przysługuje prawo do złożenia reklamacji.<br />
+      2. Reklamacja może być złożona pisemnie listem na adres Usługodawcy lub za pośrednictwem maila:
+      kontakt@odnowastudio.pl.<br />
+      3. Składając reklamację Usługodawca zaleca podanie danych kontaktowych Uczestnika oraz dokładne opisanie przyczyn
+      reklamacji i żądań wobec Usługodawcy.<br />
+      4. Usługodawca rozpozna reklamację w terminie do 14 dni od dnia jej otrzymania. O wyniku postępowania
+      reklamacyjnego Uczestnik zostanie powiadomiony listem poleconym bądź za pośrednictwem poczty e-mail.<br />
+      5. W procedurze reklamacji Usługodawca nie przewiduje możliwości pozasądowego rozstrzygnięcia sporu.<br />
+      6. Zgodnie z Rozporządzeniem Parlamentu Europejskiego i Rady (UE) nr 524/2013 z dnia 21 maja 2013 r. w sprawie
+      internetowego systemu rozstrzygania sporów konsumenckich oraz zmiany rozporządzenia (WE) nr 2006/2004 i dyrektywy
+      2009/22/WE (rozporządzenie w sprawie ODR w sporach konsumenckich), narzędziem służącym pozasądowemu rozstrzyganiu
+      sporów dotyczących zobowiązań umownych wynikających z internetowych umów sprzedaży lub umów o świadczenie usług
+      zawieranych między Konsumentami mieszkającymi w Unii Europejskiej a przedsiębiorcami mającymi siedzibę w UE jest
+      platforma ODR (Online Dispute Resolution). Jest ona dostępna pod adresem http://ec.europa.eu/consumers/odr/.
+      Rozstrzyganie sporów tą metodą ma charakter bezpłatny i dobrowolny.<br />
     </p>
     <p class="font-bold mb-2">§ 6 Ochrona danych osobowych i prywatności</p>
     <p class="mb-4">
-      1. Administratorem danych osobowych przetwarzanych w celu zawarcia i wykonania Umowy jest Usługodawca – Patryk Nowak, prowadzący działalność gospodarczą pod firmą ODNOWA STUDIO TRENINGU PERSONALNEGO PATRYK NOWAK.<br/>
-      2. Dane osobowe w postaci imienia i nazwiska, adresu zamieszkania, adresu e-mail, nr telefonu i wizerunku przetwarzane są zgodnie z postanowieniami Rozporządzenia Parlamentu Europejskiego i Rady (UE) 2016/679 z dnia 27 kwietnia 2016 r. w sprawie ochrony osób fizycznych w związku z przetwarzaniem danych osobowych i w sprawie swobodnego przepływu takich danych oraz uchylenia dyrektywy 95/46/WE (ogólne rozporządzenie o ochronie danych), tzw. RODO oraz aktualnie obowiązującymi regulacjami prawa polskiego.<br/>
-      3. Usługodawca przetwarza dane osobowe wyłącznie w celu zawarcia i wykonania Umowy oraz konieczności zapewnienia ochrony mienia i osób na terenie siedziby Usługodawcy.<br/>
-      4. Podstawą przetwarzania danych osobowych przez Usługodawcę jest dobrowolna zgoda osoby, której dane dotyczą; niezbędność przetwarzania do zawarcia i wykonania Umowy; albo prawnie uzasadniony interes Usługodawcy – podstawa z art. 6 ust. 1 lit. a,  b i f RODO.<br/>
-      5. Podanie danych przez Uczestnika jest dobrowolne. Jeżeli jednak Uczestnik nie poda danych, Usługodawca nie będzie mógł zawrzeć z Uczestnikiem, a następnie wykonać na jego rzecz Umowy.<br/>
-      6. Usługodawca może udostępniać dane następującym kategoriom podmiotów: firmie księgowej, kancelarii prawnej, operatorom obsługującym płatności oraz wykonawcom usług ochrony osób i mienia. Takie podmioty przetwarzają dane na podstawie umowy z Usługodawcą. Usługodawca nie udostępnia danych osobom trzecim ani nie przekazuje tych danych poza teren Polski/UE/Europejskiego Obszaru Gospodarczego.<br/>
-      7. Uczestnikowi przysługuje prawo dostępu do swoich danych oraz otrzymania ich kopii, sprostowania (poprawiania) danych, usunięcia danych, ograniczenia przetwarzania danych, wniesienia sprzeciwu wobec przetwarzania danych, przenoszenia danych, wniesienia skargi do organu nadzorczego (Prezesa Urzędu Ochrony Danych Osobowych, ul. Stawki 2, 00-193 Warszawa) oraz do cofnięcia zgody na przetwarzanie danych osobowych. W celu wykonania tych praw należy skierować żądanie do Usługodawcy.<br/>
-      8. Usługodawca przechowuje dane do czasu posiadania udzielonej przez Uczestnika zgody, do końca okresu przedawnienia potencjalnych roszczeń wynikających z Umowy lub przez okres niezbędny do wypełnienia obowiązku prawnego (np. wynikającego z przepisów podatkowych lub rachunkowych). Dane osobowe w postaci wizerunku Usługodawca przechowuje nie dłużej niż przez okres 30 dni od dnia nagrania, chyba że nagrania obrazu zawierające dane osobowe stanowią dowód w postępowaniu prowadzonym na podstawie prawa lub Usługodawca otrzyma informację, iż mogą one stanowić dowód w takim postępowaniu. W takich przypadkach termin określony powyżej ulega przedłużeniu do czasu prawomocnego zakończenia takiego postępowania.<br/>
+      1. Administratorem danych osobowych przetwarzanych w celu zawarcia i wykonania Umowy jest Usługodawca – Patryk
+      Nowak, prowadzący działalność gospodarczą pod firmą ODNOWA STUDIO TRENINGU PERSONALNEGO PATRYK NOWAK.<br />
+      2. Dane osobowe w postaci imienia i nazwiska, adresu zamieszkania, adresu e-mail, nr telefonu i wizerunku
+      przetwarzane są zgodnie z postanowieniami Rozporządzenia Parlamentu Europejskiego i Rady (UE) 2016/679 z dnia 27
+      kwietnia 2016 r. w sprawie ochrony osób fizycznych w związku z przetwarzaniem danych osobowych i w sprawie
+      swobodnego przepływu takich danych oraz uchylenia dyrektywy 95/46/WE (ogólne rozporządzenie o ochronie danych),
+      tzw. RODO oraz aktualnie obowiązującymi regulacjami prawa polskiego.<br />
+      3. Usługodawca przetwarza dane osobowe wyłącznie w celu zawarcia i wykonania Umowy oraz konieczności zapewnienia
+      ochrony mienia i osób na terenie siedziby Usługodawcy.<br />
+      4. Podstawą przetwarzania danych osobowych przez Usługodawcę jest dobrowolna zgoda osoby, której dane dotyczą;
+      niezbędność przetwarzania do zawarcia i wykonania Umowy; albo prawnie uzasadniony interes Usługodawcy – podstawa z
+      art. 6 ust. 1 lit. a, b i f RODO.<br />
+      5. Podanie danych przez Uczestnika jest dobrowolne. Jeżeli jednak Uczestnik nie poda danych, Usługodawca nie
+      będzie mógł zawrzeć z Uczestnikiem, a następnie wykonać na jego rzecz Umowy.<br />
+      6. Usługodawca może udostępniać dane następującym kategoriom podmiotów: firmie księgowej, kancelarii prawnej,
+      operatorom obsługującym płatności oraz wykonawcom usług ochrony osób i mienia. Takie podmioty przetwarzają dane na
+      podstawie umowy z Usługodawcą. Usługodawca nie udostępnia danych osobom trzecim ani nie przekazuje tych danych
+      poza teren Polski/UE/Europejskiego Obszaru Gospodarczego.<br />
+      7. Uczestnikowi przysługuje prawo dostępu do swoich danych oraz otrzymania ich kopii, sprostowania (poprawiania)
+      danych, usunięcia danych, ograniczenia przetwarzania danych, wniesienia sprzeciwu wobec przetwarzania danych,
+      przenoszenia danych, wniesienia skargi do organu nadzorczego (Prezesa Urzędu Ochrony Danych Osobowych, ul. Stawki
+      2, 00-193 Warszawa) oraz do cofnięcia zgody na przetwarzanie danych osobowych. W celu wykonania tych praw należy
+      skierować żądanie do Usługodawcy.<br />
+      8. Usługodawca przechowuje dane do czasu posiadania udzielonej przez Uczestnika zgody, do końca okresu
+      przedawnienia potencjalnych roszczeń wynikających z Umowy lub przez okres niezbędny do wypełnienia obowiązku
+      prawnego (np. wynikającego z przepisów podatkowych lub rachunkowych). Dane osobowe w postaci wizerunku Usługodawca
+      przechowuje nie dłużej niż przez okres 30 dni od dnia nagrania, chyba że nagrania obrazu zawierające dane osobowe
+      stanowią dowód w postępowaniu prowadzonym na podstawie prawa lub Usługodawca otrzyma informację, iż mogą one
+      stanowić dowód w takim postępowaniu. W takich przypadkach termin określony powyżej ulega przedłużeniu do czasu
+      prawomocnego zakończenia takiego postępowania.<br />
     </p>
     <p class="font-bold mb-2">§ 7 Postanowienia końcowe</p>
     <p class="mb-4">
-      1. W sprawach nieuregulowanych Regulaminem obowiązują przepisy powszechnie obowiązującego prawa, w tym w szczególności postanowienia Kodeksu cywilnego oraz ustawy z dnia 25 czerwca 2010 r. o sporcie.<br/>
-      2. Regulamin nie wyłącza oraz nie ogranicza żadnych uprawnień Konsumenta, które przysługują mu na mocy bezwzględnie obowiązujących przepisów prawa.<br/>
-      3. Regulamin obowiązuje w niniejszej wersji od lipca 2020 r.<br/>
-      4. O zmianie Regulaminu Uczestnik zostanie poinformowany przez Usługodawcę na co najmniej 7 dni przed wejściem w życie tych zmian za pośrednictwem poczty elektronicznej na adres e-mail wskazany w Umowie. W razie braku akceptacji tychże zmian, Uczestnik ma prawo wypowiedzieć Umowę.<br/>
-      5. Utrwalenie, zabezpieczenie oraz udostępnienie Uczestnikowi treści zawieranej Umowy i Regulaminu następuje poprzez:<br/>
-      a) wydanie Uczestnikowi pisemnego egzemplarza Umowy wraz z załącznikami, w tym Regulaminem,<br/>
-      b) zamieszczenie Regulaminu na tablicy w siedzibie Usługodawcy,<br/>
-      c) zamieszczenie Regulaminu na stronie internetowej Usługodawcy www.odnowastudio.pl.<br/>
+      1. W sprawach nieuregulowanych Regulaminem obowiązują przepisy powszechnie obowiązującego prawa, w tym w
+      szczególności postanowienia Kodeksu cywilnego oraz ustawy z dnia 25 czerwca 2010 r. o sporcie.<br />
+      2. Regulamin nie wyłącza oraz nie ogranicza żadnych uprawnień Konsumenta, które przysługują mu na mocy
+      bezwzględnie obowiązujących przepisów prawa.<br />
+      3. Regulamin obowiązuje w niniejszej wersji od lipca 2020 r.<br />
+      4. O zmianie Regulaminu Uczestnik zostanie poinformowany przez Usługodawcę na co najmniej 7 dni przed wejściem w
+      życie tych zmian za pośrednictwem poczty elektronicznej na adres e-mail wskazany w Umowie. W razie braku
+      akceptacji tychże zmian, Uczestnik ma prawo wypowiedzieć Umowę.<br />
+      5. Utrwalenie, zabezpieczenie oraz udostępnienie Uczestnikowi treści zawieranej Umowy i Regulaminu następuje
+      poprzez:<br />
+      a) wydanie Uczestnikowi pisemnego egzemplarza Umowy wraz z załącznikami, w tym Regulaminem,<br />
+      b) zamieszczenie Regulaminu na tablicy w siedzibie Usługodawcy,<br />
+      c) zamieszczenie Regulaminu na stronie internetowej Usługodawcy www.odnowastudio.pl.<br />
     </p>
   </main>
 
@@ -208,10 +320,12 @@
           Studio treningu personalnego
         </p>
         <p class="mt-4 text-md text-gray-300">
-          ODNOWA Studio treningu personalnego nie jest otwartą siłownią czy centrum fitness. Jest to kameralne miejsce gdzie w zaciszu, bez niepotrzebnego tłumu spełnisz swoje realizacje treningowe. Jest to gwarancja dobrego samopoczucia jeżeli cenisz sobie prywatność.
+          ODNOWA Studio treningu personalnego nie jest otwartą siłownią czy centrum fitness. Jest to kameralne miejsce
+          gdzie w zaciszu, bez niepotrzebnego tłumu spełnisz swoje realizacje treningowe. Jest to gwarancja dobrego
+          samopoczucia jeżeli cenisz sobie prywatność.
         </p>
       </div>
-  
+
       <div class="flex-1 mr-6 mt-12">
         <p class="text-xl font-bold">
           Media społecznościowe
@@ -219,20 +333,21 @@
         <div class="h-1 w-12 bg-secondary my-2"></div>
         <div class="flex">
           <a href="https://www.facebook.com/odnowakalisz" target="_blank" rel="noopener" class="mr-2">
-            <img src="./assets/facebook.svg" alt="facebook logo" width="48px" height="48px"/>
+            <img src="./assets/facebook.svg" alt="facebook logo" width="48px" height="48px" />
           </a>
           <a href="https://www.instagram.com/odnowastudio/" target="_blank" rel="noopener">
-            <img src="./assets/instagram.svg" alt="instgram logo" width="48px" height="48px"/>
+            <img src="./assets/instagram.svg" alt="instgram logo" width="48px" height="48px" />
           </a>
         </div>
       </div>
-  
+
       <div class="flex-1 mt-12">
         <p class="text-xl font-bold">
           Kontakt
         </p>
         <div class="h-1 w-12 bg-secondary my-2"></div>
-        <a href="https://www.google.com/maps/dir//Staszica+43,+62-800+Kalisz/@51.752542,18.0777471,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x471ac594a7e866bd:0xb5a57977107fda67!2m2!1d18.0799358!2d51.7525387" class="block py-4 font-bold" target="_blank" rel="noopener">
+        <a href="https://www.google.com/maps/dir//Staszica+43,+62-800+Kalisz/@51.752542,18.0777471,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x471ac594a7e866bd:0xb5a57977107fda67!2m2!1d18.0799358!2d51.7525387"
+          class="block py-4 font-bold" target="_blank" rel="noopener">
           Staszica 43, 62-800 Kalisz
         </a>
         <a href="tel:+48782556543" class="block pb-4 font-bold">
@@ -247,16 +362,18 @@
       </div>
     </div>
   </footer>
-  
+
   <div class="max-w-screen-xl mx-auto my-4 px-6 font-bold">
-    Prawa autorskie <span id="year"></span> © ODNOWA <span class="text-secondary">Studio Treningu Personalnego</span>. Wszelkie prawa zastrzeżone.
+    Prawa autorskie <span id="year"></span> © ODNOWA <span class="text-secondary">Studio Treningu Personalnego</span>.
+    Wszelkie prawa zastrzeżone.
   </div>
 
   <script src="./scripts/menu.js"></script>
   <script src="./scripts/cookies.js"></script>
   <script>
-    const year = document.getElementById("year")
+    const year = document.getElementById("year");
     year.textContent = new Date().getFullYear()
   </script>
 </body>
+
 </html>

@@ -1,13 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+  <script data-cookieconsent="ignore">
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag("consent", "default", {
+      ad_personalization: "denied",
+      ad_storage: "denied",
+      ad_user_data: "denied",
+      analytics_storage: "denied",
+      functionality_storage: "denied",
+      personalization_storage: "denied",
+      security_storage: "granted",
+      wait_for_update: 500,
+    });
+    gtag("set", "ads_data_redaction", true);
+    gtag("set", "url_passthrough", false);
+  </script>
+  <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="19b8820d-de9f-46b5-9951-270fc46cc6c5"
+    data-blockingmode="auto" type="text/javascript"></script>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kalkulator kalorii - ODNOWA Studio Treningu Personalnego</title>
   <link href="./output.css" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
-  <meta name="description" content="Ustal swój cel, a specjalny algorytm obliczy Twoje dzienne zapotrzebowanie kaloryczne."/>
+  <meta name="description"
+    content="Ustal swój cel, a specjalny algorytm obliczy Twoje dzienne zapotrzebowanie kaloryczne." />
   <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
@@ -15,17 +35,38 @@
   <link rel="mask-icon" href="assets/favicon/safari-pinned-tab.svg" color="#5bbad5">
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="theme-color" content="#ffffff">
+  <!-- Meta Pixel Code -->
+  <script>
+    !function (f, b, e, v, n, t, s) {
+      if (f.fbq) return; n = f.fbq = function () {
+        n.callMethod ?
+          n.callMethod.apply(n, arguments) : n.queue.push(arguments);
+      };
+      if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+      n.queue = []; t = b.createElement(e); t.async = !0;
+      t.src = v; s = b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t, s);
+    }(window, document, 'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1045598730624331');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=1045598730624331&ev=PageView&noscript=1" /></noscript>
+  <!-- End Meta Pixel Code -->
 </head>
 <style>
   input[type="number"]::-webkit-outer-spin-button,
   input[type="number"]::-webkit-inner-spin-button {
-      -webkit-appearance: none;
-      margin: 0;
+    -webkit-appearance: none;
+    margin: 0;
   }
+
   input[type="number"] {
-      -moz-appearance: textfield;
+    -moz-appearance: textfield;
   }
 </style>
+
 <body>
   <nav class="w-full sticky top-0 left-0 bg-black drop-shadow-[0_1px_1px_rgba(255,255,255,0.2)]">
     <div class="max-w-screen-xl mx-auto flex justify-between items-center px-6">
@@ -62,30 +103,15 @@
           </a>
         </li>
       </ul>
-      
-      <button 
-        class="md:hidden w-6 h-6 flex items-center justify-center relative"
-        id="nav-toggler"
-        aria-label="menu"
-      >
-        <span 
-          class="transform transition w-full h-px bg-white -translate-y-2 absolute"
-          id="hamburger1"
-        ></span>
-        <span 
-          class="transform transition w-full h-px bg-white absolute"
-          id="hamburger2"
-        ></span>
-        <span 
-          class="transform transition w-full h-px bg-white translate-y-2 absolute"
-          id="hamburger3"
-        ></span>
+
+      <button class="md:hidden w-6 h-6 flex items-center justify-center relative" id="nav-toggler" aria-label="menu">
+        <span class="transform transition w-full h-px bg-white -translate-y-2 absolute" id="hamburger1"></span>
+        <span class="transform transition w-full h-px bg-white absolute" id="hamburger2"></span>
+        <span class="transform transition w-full h-px bg-white translate-y-2 absolute" id="hamburger3"></span>
       </button>
 
-      <div 
-        class="transform transition -translate-x-full md:hidden absolute left-0 top-0 -z-10 w-full min-h-screen flex" 
-        id="mobile-menu"
-      >
+      <div class="transform transition -translate-x-full md:hidden absolute left-0 top-0 -z-10 w-full min-h-screen flex"
+        id="mobile-menu">
         <ul class="text-lg font-bold bg-black pl-6 h-screen w-2/3 pt-16">
           <li class="mr-4">
             <a href="/">
@@ -126,7 +152,7 @@
     <p class="text-center text-xl mt-8">Oblicz ile musisz spożywać kalorii, aby osiągnąć swój cel</p>
 
     <div class="flex mt-12 justify-between" id="form">
-      <div class="bg-neutral-900 w-full p-8 rounded-lg" >
+      <div class="bg-neutral-900 w-full p-8 rounded-lg">
         <div class="mb-4">
           <div class="flex items-center" id="gender_field">
             <p class="font-bold text-lg mb-2">
@@ -145,12 +171,8 @@
               Waga*
             </label>
           </div>
-          <input 
-            id="weight"
-            type="number" 
-            placeholder="Wpisz wagę w kg" 
-            class="bg-transparent border-b-2 border-[#e1ad00] outline-none"
-          />
+          <input id="weight" type="number" placeholder="Wpisz wagę w kg"
+            class="bg-transparent border-b-2 border-[#e1ad00] outline-none" />
         </div>
 
         <div class="mt-4">
@@ -159,12 +181,8 @@
               Wiek*
             </label>
           </div>
-          <input 
-            id="age"
-            type="number" 
-            placeholder="Wpisz swój wiek" 
-            class="bg-transparent border-b-2 border-[#e1ad00] outline-none"
-          />
+          <input id="age" type="number" placeholder="Wpisz swój wiek"
+            class="bg-transparent border-b-2 border-[#e1ad00] outline-none" />
         </div>
 
         <div class="mt-4">
@@ -173,12 +191,8 @@
               Wzrost*
             </label>
           </div>
-          <input 
-            id="height"
-            type="number" 
-            placeholder="Wpisz swój wzrost w cm" 
-            class="bg-transparent border-b-2 border-[#e1ad00] outline-none"
-          />
+          <input id="height" type="number" placeholder="Wpisz swój wzrost w cm"
+            class="bg-transparent border-b-2 border-[#e1ad00] outline-none" />
         </div>
 
         <div>
@@ -186,24 +200,21 @@
             Aktywność fizyczna*
           </label>
           <div class="flex">
-            <input 
-              type="range" 
-              id="physical_activity_slider"
-              min="0"
-              max="30"
-              value="0"
-            />
+            <input type="range" id="physical_activity_slider" min="0" max="30" value="0" />
             <p class="ml-4 font-bold" id="physical_activity_paragraph">1</p>
           </div>
           <p class="mt-2">
-            1.3 - osoba leżąca; choroba; całkowity brak ruchu <br/>
-            1.4 - siedzący tryb życia; ~6000 kroków dziennie <br/>
-            1.45 - nisko aktywny tryb życia; praca biurowa; większość dnia na siedząco; 1-2x lekkie treningi w tygodniu; ~8000 kroków <br/>
-            1.55 - średnio aktywny tryb życia; praca siedząca; 2-3x lekkie treningi w tygodniu; ~10000 kroków dziennie <br/>
-            1.6 - umiarkowanie aktywny tryb życia; 3-4x normalne treningi w tygodniu; ~10000-12000 kroków dziennie <br/>
-            1.7 - aktywny tryb życia; 4-5x treningów w tygodniu lub praca fizyczna; >12000 kroków dziennie <br/>
-            1.8 - aktywny tryb życia; 5-6x treningów w tygodniu; >10000 kroków dziennie <br/>
-            2.0 - bardzo aktywny tryb życia; uprawianie sportu zawodowo; więcej niż 6 treningów w tygodniu <br/>
+            1.3 - osoba leżąca; choroba; całkowity brak ruchu <br />
+            1.4 - siedzący tryb życia; ~6000 kroków dziennie <br />
+            1.45 - nisko aktywny tryb życia; praca biurowa; większość dnia na siedząco; 1-2x lekkie treningi w tygodniu;
+            ~8000 kroków <br />
+            1.55 - średnio aktywny tryb życia; praca siedząca; 2-3x lekkie treningi w tygodniu; ~10000 kroków dziennie
+            <br />
+            1.6 - umiarkowanie aktywny tryb życia; 3-4x normalne treningi w tygodniu; ~10000-12000 kroków dziennie
+            <br />
+            1.7 - aktywny tryb życia; 4-5x treningów w tygodniu lub praca fizyczna; >12000 kroków dziennie <br />
+            1.8 - aktywny tryb życia; 5-6x treningów w tygodniu; >10000 kroków dziennie <br />
+            2.0 - bardzo aktywny tryb życia; uprawianie sportu zawodowo; więcej niż 6 treningów w tygodniu <br />
           </p>
         </div>
 
@@ -227,10 +238,7 @@
           </div>
         </div>
 
-        <button 
-          class="bg-secondary px-6 py-2 rounded-lg text-black mt-8"
-          id="calculate"
-        >
+        <button class="bg-secondary px-6 py-2 rounded-lg text-black mt-8" id="calculate">
           Oblicz
         </button>
       </div>
@@ -247,10 +255,12 @@
           Studio treningu personalnego
         </p>
         <p class="mt-4 text-md text-gray-300">
-          ODNOWA Studio treningu personalnego nie jest otwartą siłownią czy centrum fitness. Jest to kameralne miejsce gdzie w zaciszu, bez niepotrzebnego tłumu spełnisz swoje realizacje treningowe. Jest to gwarancja dobrego samopoczucia jeżeli cenisz sobie prywatność.
+          ODNOWA Studio treningu personalnego nie jest otwartą siłownią czy centrum fitness. Jest to kameralne miejsce
+          gdzie w zaciszu, bez niepotrzebnego tłumu spełnisz swoje realizacje treningowe. Jest to gwarancja dobrego
+          samopoczucia jeżeli cenisz sobie prywatność.
         </p>
       </div>
-  
+
       <div class="flex-1 mr-6 mt-12">
         <p class="text-xl font-bold">
           Media społecznościowe
@@ -258,20 +268,21 @@
         <div class="h-1 w-12 bg-secondary my-2"></div>
         <div class="flex">
           <a href="https://www.facebook.com/odnowakalisz" target="_blank" rel="noopener" class="mr-2">
-            <img src="./assets/facebook.svg" alt="facebook logo" width="48px" height="48px"/>
+            <img src="./assets/facebook.svg" alt="facebook logo" width="48px" height="48px" />
           </a>
           <a href="https://www.instagram.com/odnowastudio/" target="_blank" rel="noopener">
-            <img src="./assets/instagram.svg" alt="instgram logo" width="48px" height="48px"/>
+            <img src="./assets/instagram.svg" alt="instgram logo" width="48px" height="48px" />
           </a>
         </div>
       </div>
-  
+
       <div class="flex-1 mt-12">
         <p class="text-xl font-bold">
           Kontakt
         </p>
         <div class="h-1 w-12 bg-secondary my-2"></div>
-        <a href="https://www.google.com/maps/dir//Staszica+43,+62-800+Kalisz/@51.752542,18.0777471,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x471ac594a7e866bd:0xb5a57977107fda67!2m2!1d18.0799358!2d51.7525387" class="block py-4 font-bold" target="_blank" rel="noopener">
+        <a href="https://www.google.com/maps/dir//Staszica+43,+62-800+Kalisz/@51.752542,18.0777471,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x471ac594a7e866bd:0xb5a57977107fda67!2m2!1d18.0799358!2d51.7525387"
+          class="block py-4 font-bold" target="_blank" rel="noopener">
           Staszica 43, 62-800 Kalisz
         </a>
         <a href="tel:+48782556543" class="block pb-4 font-bold">
@@ -286,9 +297,10 @@
       </div>
     </div>
   </footer>
-  
+
   <div class="max-w-screen-xl mx-auto my-4 px-6 font-bold">
-    Prawa autorskie <span id="year"></span> © ODNOWA <span class="text-secondary">Studio Treningu Personalnego</span>. Wszelkie prawa zastrzeżone.
+    Prawa autorskie <span id="year"></span> © ODNOWA <span class="text-secondary">Studio Treningu Personalnego</span>.
+    Wszelkie prawa zastrzeżone.
   </div>
 
   <div id="fb-root"></div>
@@ -298,7 +310,7 @@
   <script src="./scripts/kcalCalculator.js"></script>
   <script src="./scripts/cookies.js"></script>
   <script>
-    const year = document.getElementById("year")
+    const year = document.getElementById("year");
     year.textContent = new Date().getFullYear()
   </script>
 
@@ -309,14 +321,14 @@
   </script>
 
   <script>
-    window.fbAsyncInit = function() {
+    window.fbAsyncInit = function () {
       FB.init({
-        xfbml            : true,
-        version          : 'v15.0'
+        xfbml: true,
+        version: 'v15.0'
       });
     };
 
-    (function(d, s, id) {
+    (function (d, s, id) {
       var js, fjs = d.getElementsByTagName(s)[0];
       if (d.getElementById(id)) return;
       js = d.createElement(s); js.id = id;
@@ -325,4 +337,5 @@
     }(document, 'script', 'facebook-jssdk'));
   </script>
 </body>
+
 </html>
